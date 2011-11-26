@@ -64,3 +64,5 @@ C:\SourceCode\QFGCharacterDecoder\QFGCharacterDecoder\obj\x86\Debug\QFGCharacter
 C:\SourceCode\QFGCharacterDecoder\QFGCharacterDecoder\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\SourceCode\QFGCharacterDecoder\QFGCharacterDecoder\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\SourceCode\QFGCharacterDecoder\QFGCharacterDecoder\obj\x86\Debug\QFGCharacterDecoder.MainForm.resources
+C:\SourceCodeGit\QFGEditor\QFGCharacterDecoder\obj\x86\Debug\QFGCharacterDecoder.exe
+C:\SourceCodeGit\QFGEditor\QFGCharacterDecoder\obj\x86\Debug\QFGCharacterDecoder.pdb
