@@ -38,35 +38,35 @@ namespace QfgCharacterLibrary.GameInfo
                     break;
 
                 case 23:
-                    character.MagicSkillFetch = value;
+                    character.MagicSkillOpen = value;
                     break;
 
                 case 24:
-                    character.MagicSkillFlame = value;
-                    break;
-
-                case 25:
-                    character.MagicSkillCalm = value;
-                    break;
-
-                case 26:
-                    character.MagicSkillZap = value;
-                    break;
-
-                case 27:
-                    character.MagicSkillDazzle = value;
-                    break;
-
-                case 28:
-                    character.MagicSkillTrigger = value;
-                    break;
-
-                case 29:
                     character.MagicSkillDetect = value;
                     break;
 
+                case 25:
+                    character.MagicSkillTrigger = value;
+                    break;
+
+                case 26:
+                    character.MagicSkillDazzle = value;
+                    break;
+
+                case 27:
+                    character.MagicSkillZap = value;
+                    break;
+
+                case 28:
+                    character.MagicSkillCalm = value;
+                    break;
+
+                case 29:
+                    character.MagicSkillFlame = value;
+                    break;
+
                 case 30:
-                    character.MagicSkillOpen = value;
+                    character.MagicSkillFetch = value;
                     break;
 
                 case 18:

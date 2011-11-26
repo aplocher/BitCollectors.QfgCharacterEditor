@@ -28,3 +28,8 @@ C:\SourceCode\QFGCharacterDecoder\QfgCharacterLibrary\bin\Debug\QfgCharacterLibr
 C:\SourceCode\QFGCharacterDecoder\QfgCharacterLibrary\obj\Debug\ResolveAssemblyReference.cache
 C:\SourceCode\QFGCharacterDecoder\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.dll
 C:\SourceCode\QFGCharacterDecoder\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.pdb
+C:\SourceCodeGit\QFGEditor\QfgCharacterLibrary\bin\Debug\QfgCharacterLibrary.dll
+C:\SourceCodeGit\QFGEditor\QfgCharacterLibrary\bin\Debug\QfgCharacterLibrary.pdb
+C:\SourceCodeGit\QFGEditor\QfgCharacterLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\SourceCodeGit\QFGEditor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.dll
+C:\SourceCodeGit\QFGEditor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.pdb
