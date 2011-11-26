@@ -571,7 +571,6 @@ namespace QfgCharacterLibrary
         public string Encode()
         {
             string str = string.Format("83-{25}-2-72-71-115-{0}-{1}-{2}-{3}-{4}-{5}-{6}-{7}-{8}-{9}-{10}-{11}-{12}-28-4-57-75-{13}-{14}-{15}-{16}-{17}-{18}-{19}-{20}-{21}-{22}-{23}-{24}-0-121-6-9991-9992-67-8-45-112-",
-                //string str = string.Format("112-45-8-67-9992-9991-6-121-0-{24}-{23}-{22}-{21}-{20}-{19}-{18}-{17}-{16}-{15}-{14}-{13}-75-57-4-28-{12}-{11}-{10}-{9}-{8}-{7}-{6}-{5}-{4}-{3}-{2}-{1}-{0}-115-71-72-2-0-83-",
                 this.Strength.ToString(),
                 this.Intelligence.ToString(),
                 this.Agility.ToString(),
@@ -631,25 +630,6 @@ namespace QfgCharacterLibrary
             OnLogData(total1.ToString() + " - " + total2.ToString());
 
 
-
-            //int idx = 0;
-            //int total1 = 0;
-            //int total2 = 0;
-            //foreach (int i in decodedStrArray)
-            //{
-            //    if (idx > 9 && idx % 2 == 1)
-            //    {
-            //        total1 += i;
-            //    }
-
-            //    if (idx > 9 && idx % 2 == 0)
-            //    {
-            //        total2 += i;
-            //    }
-
-            //    idx++;
-            //}
-
             this.CheckSum1 = total1;
             this.CheckSum2 = total2;
 
@@ -668,51 +648,6 @@ namespace QfgCharacterLibrary
             }
 
 
-            //foreach (int val in hexArray)
-            //{
-            //    int decoded = (prev ^ val);
-
-            //    //this.OnLogData(decoded.ToString());
-
-            //    decodedValues.Add(decoded);
-
-            //    this.QfgGameInfo.LoadMappings(index, decoded, this);
-
-            //    if (index > 9 && index % 2 == 1)
-            //    {
-            //        total1 += decoded;
-            //    }
-
-            //    if (index > 9 && index % 2 == 0)
-            //    {
-            //        total2 += decoded;
-            //    }
-
-            //    prev = val;
-            //    index++;
-            //}
-
-            ////total += 83;
-
-            //int check1 = 0xce + total1;
-
-            ////for (int i = 0; i < OLD_NUM_ATTRIBS + CHECK_DATA; i += 2)
-            ////{
-            ////    stats[i + 1] = stats[i + 1] & 127;
-            ////    check1 += stats[i + 1];
-            ////}
-
-            //int check2 = 0 + total2;
-
-            ////for (int i = 1; i < OLD_NUM_ATTRIBS + CHECK_DATA; i += 2)
-            ////{
-            ////    stats[i + 1] = stats[i + 1] & 127;
-            ////    check2 += stats[i + 1];
-            ////}
-
-            //check1 &= 127;
-            //check2 &= 127;
-
             int prev = 0;// x53;
             int index = 0;
             List<int> encodedVal = new List<int>();
@@ -725,24 +660,10 @@ namespace QfgCharacterLibrary
 
                 if (index > 0)
                     encodedVal.Add(encoded);
-                //decodedStr += decoded.ToString() + "-";
-                //decodedValues.Add(decoded);
-
-                //this.QfgGameInfo.LoadMappings(index, decoded, this);
 
                 prev = encoded;
                 index++;
             }
-
-            //int prev = 0;
-            //List<int> encodedVal = new List<int>();
-
-            //foreach (int val in decodedStrArray)
-            //{
-            //    encodedVal.Add((val ^ prev));
-
-            //    prev = val ^ prev;
-            //}
 
             List<string> encodedStrArray = new List<string>();
             foreach (int val in encodedVal)
@@ -756,15 +677,6 @@ namespace QfgCharacterLibrary
             {
                 encodedValue += encodedStrArray[i].PadLeft(2, ' ').ToLower();
             }
-
-            //StringBuilder sb = new StringBuilder();
-            //foreach (System.Reflection.PropertyInfo propInfo in this.GetType().GetProperties())
-            //{
-            //    sb.Append(propInfo.Name);
-            //    sb.Append(": ");
-            //    sb.AppendLine(propInfo.GetValue(this, null).ToString());
-            //}
-            //this.OnLogData(sb.ToString() + "--------------------------------" + Environment.NewLine);
 
             this.OnLogData(encodedValue);
 
@@ -835,72 +747,6 @@ namespace QfgCharacterLibrary
             this.QfgClass = QfgClasses.Fighter;
             this.QfgGame = QfgGames.Qfg1;
 
-            //int SCORE_BIT = 64;
-            //int CHECK_DATA = 10;
-            //int EXTRA_DATA = 18;
-            //int OLD_NUM_ATTRIBS = 25;
-
-            //string other = dataString;
-            ////OnLogData(other);
-            //int[] stats = new int[OLD_NUM_ATTRIBS + EXTRA_DATA + 1];
-            //stats[0] = 0x53;
-            //for (int i = 0; i < OLD_NUM_ATTRIBS + EXTRA_DATA; i++)
-            //{
-            //    stats[i + 1] = convWord((other[i * 2 + 1] << 8) | other[i * 2]);
-            //}
-
-
-            ////string test2 = "";
-            ////for (int i = stats.Length - 1; i >= 0; i--)
-            ////{
-            ////    test2 += stats[i] + "-";
-            ////}
-            ////OnLogData(test2);
-
-            //for (int i = OLD_NUM_ATTRIBS + EXTRA_DATA; i > 0; i--)
-            //{
-            //    stats[i] ^= stats[i - 1] & 127;
-            //}
-
-            //int tcheck1 = 0xce;
-            //string tcheckStr = "";
-
-            //for (int i = 0; i < OLD_NUM_ATTRIBS + CHECK_DATA; i += 2)
-            //{
-            //    stats[i + 1] = stats[i + 1] & 127;
-            //    tcheck1 += stats[i + 1];
-
-            //    tcheckStr += stats[i + 1].ToString() + "-";
-            //}
-
-            //int tcheck2 = 0;
-
-            //for (int i = 1; i < OLD_NUM_ATTRIBS + CHECK_DATA; i += 2)
-            //{
-            //    stats[i + 1] = stats[i + 1] & 127;
-            //    tcheck2 += stats[i + 1];
-            //}
-
-            //tcheck1 &= 127;
-            //tcheck2 &= 127;
-
-            //string test = "";
-            ////foreach (int t in stats)
-            ////{
-            ////    test += t + "-";
-            ////}
-
-            //for (int i = 0; i < stats.Length; i++)
-            //{
-            //    test += stats[i] + "-";
-            //}
-
-            //OnLogData(test);
-            //OnLogData(tcheckStr);
-            //OnLogData(tcheck1.ToString() + " - " + tcheck2.ToString());
-
-            //LoadGameInfo();
-
             string hexString = dataString;
             List<int> hexArray = new List<int>();
 
@@ -946,8 +792,6 @@ namespace QfgCharacterLibrary
                 total1Str += decodedValues[i + 1].ToString() + "-";
             }
 
-            //OnLogData(total1Str);
-
             for (int i = 1; i < 35; i += 2)
             {
                 total2 += decodedValues[i + 1];
@@ -957,15 +801,6 @@ namespace QfgCharacterLibrary
             total2 &= 127;
 
             OnLogData(total1.ToString() + " - " + total2.ToString());
-
-            //StringBuilder sb = new StringBuilder();
-            //foreach (System.Reflection.PropertyInfo propInfo in this.GetType().GetProperties())
-            //{
-            //    sb.Append(propInfo.Name);
-            //    sb.Append(": ");
-            //    sb.AppendLine(propInfo.GetValue(this, null).ToString());
-            //}
-            //this.OnLogData(sb.ToString());
 
             if (this.CheckSum1 != total1 || this.CheckSum2 != total2)
             {
