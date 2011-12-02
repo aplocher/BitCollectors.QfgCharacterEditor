@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QFGCharacterDecoder", "QFGCharacterDecoder\QFGCharacterDecoder.csproj", "{10A415AB-FA6E-4684-B0DC-5511472EA75E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QFGCharacterWinUI", "QFGCharacterWinUI\QFGCharacterWinUI.csproj", "{10A415AB-FA6E-4684-B0DC-5511472EA75E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QfgCharacterLibrary", "QfgCharacterLibrary\QfgCharacterLibrary.csproj", "{93036471-F036-44F5-B281-6933E0AC9F22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QFGCharacterWebUI", "QFGCharacterWebUI\QFGCharacterWebUI.csproj", "{D1212C24-12CC-4600-9631-C1266A0FA0FF}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
@@ -11,9 +13,9 @@ Global
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs29
 		SccLocalPath0 = .
-		SccProjectUniqueName1 = QFGCharacterDecoder\\QFGCharacterDecoder.csproj
-		SccProjectName1 = QFGCharacterDecoder
-		SccLocalPath1 = QFGCharacterDecoder
+		SccProjectUniqueName1 = QFGCharacterWinUI\\QFGCharacterWinUI.csproj
+		SccProjectName1 = QFGCharacterWinUI
+		SccLocalPath1 = QFGCharacterWinUI
 		SccProjectUniqueName2 = QfgCharacterLibrary\\QfgCharacterLibrary.csproj
 		SccProjectName2 = QfgCharacterLibrary
 		SccLocalPath2 = QfgCharacterLibrary
@@ -47,6 +49,16 @@ Global
 		{93036471-F036-44F5-B281-6933E0AC9F22}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{93036471-F036-44F5-B281-6933E0AC9F22}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{93036471-F036-44F5-B281-6933E0AC9F22}.Release|x86.ActiveCfg = Release|Any CPU
+		{D1212C24-12CC-4600-9631-C1266A0FA0FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1212C24-12CC-4600-9631-C1266A0FA0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1212C24-12CC-4600-9631-C1266A0FA0FF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D1212C24-12CC-4600-9631-C1266A0FA0FF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D1212C24-12CC-4600-9631-C1266A0FA0FF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D1212C24-12CC-4600-9631-C1266A0FA0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1212C24-12CC-4600-9631-C1266A0FA0FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1212C24-12CC-4600-9631-C1266A0FA0FF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D1212C24-12CC-4600-9631-C1266A0FA0FF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D1212C24-12CC-4600-9631-C1266A0FA0FF}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
