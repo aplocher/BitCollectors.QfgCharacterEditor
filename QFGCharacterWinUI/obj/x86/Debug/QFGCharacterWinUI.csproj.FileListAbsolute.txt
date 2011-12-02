@@ -1,0 +1,11 @@
+C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\bin\Debug\QFGCharacterWinUI.exe
+C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\bin\Debug\QFGCharacterWinUI.pdb
+C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\bin\Debug\QfgCharacterLibrary.dll
+C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\bin\Debug\QfgCharacterLibrary.pdb
+C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.MainForm.resources
+C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.Properties.Resources.resources
+C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.exe
+C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.pdb
