@@ -58,6 +58,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CharacterController.cs" />
+    <Compile Include="Controllers\Default1Controller.cs" />
+    <Compile Include="Controllers\TestPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -80,6 +83,12 @@
     <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <None Include="Images\disk.png" />
+    <None Include="Images\folder.png" />
+    <None Include="Images\page_white_get.png" />
+    <None Include="Images\QFG1-Fighter.jpg" />
+    <None Include="Images\QFG1-Mage.jpg" />
+    <None Include="Images\QFG1-Thief.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -111,8 +120,20 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\TestPage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Character\General.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Character\CharacterStats.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Character\MagicStats.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Character\Inventory.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

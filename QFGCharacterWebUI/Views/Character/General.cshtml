@@ -1,0 +1,98 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+
+    <style type="text/css">
+        body { font-family:helvetica, Arial; font-size:9pt; padding:0px; margin:0px;background-color:#eeeeee }
+
+        #menuContainer { padding:3px;background-color:#eeeeee;border-bottom: 1px solid #cccccc; }
+
+        #tabContainer a { display:block;width:120px;float:left;padding:4px;text-decoration:none;color:Black; border-left: 1px solid #999999; border-top: 1px solid #999999; border-right: 1px solid #999999}
+        #tabContainer a.selected { background-color:White;border-top:2px solid orange; }
+        #tabContainer a:hover { border-top: 2px solid orange; }
+
+        #tabBodyContainer { background-color:White;padding:12px; min-height:300px; max-width:700px; border-left: 1px solid #999999; border-bottom: 1px solid #999999; border-right: 1px solid #999999; border-top:1px solid #999999;}
+
+        #pageContainer { padding:8px; }
+
+        .tableData tr td { padding:2px; vertical-align:top; }
+        .tblHeading { font-weight:bold; }
+
+        .menuButton { display:block;border: 1px solid #cccccc;text-decoration:none;width:80px;padding:3px;float:left;margin-right:3px; }
+        .menuButton img { vertical-align:middle;border:0px; }
+        .menuSeparator { float:left;font-weight:bold;font-size:14pt;color:#cccccc;padding-right:6px;padding-left:3px; }
+    </style>
+
+    <script type="text/javascript">
+        function goPage(url) {
+            var form = document.getElementById('mainForm');
+            form.action = url;
+            form.submit();
+        }
+    </script>
+</head>
+<body>
+    <div id="menuContainer">
+        <a href="#" class="menuButton">
+            <img src="/Images/folder.png" alt="" />
+            Open
+        </a>
+
+        <a href="#" class="menuButton">
+            <img src="/Images/disk.png" alt="" />
+            Save
+        </a>
+
+        <span class="menuSeparator">|</span>
+
+        <a href="#" class="menuButton">
+            <img src="/Images/page_white_get.png" alt="" />
+            Max Stats
+        </a>
+
+        <div style="clear:both"></div>
+    </div>
+    <div id="pageContainer">
+    
+        <div id="tabContainer">
+            <a href="#" class="selected">General</a>
+            <a href="#" onclick="goPage('/Character/CharacterStats');return false;">Character Stats</a>
+            <a href="#" onclick="goPage('/Character/MagicStats');return false;">Magic Stats</a>
+            <a href="#" onclick="goPage('/Character/Inventory');return false;">Inventory</a>
+        </div>
+        <div style="clear:both"></div>
+        <div id="tabBodyContainer">
+            <form id="mainForm" method="post" action="">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableData">
+                <tr>
+                    <td class="tblHeading">Game:</td>
+                    <td>
+                        <select>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tblHeading">Class:</td>
+                    <td>
+                        <select>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tblHeading">Character Name:</td>
+                    <td>
+                        <input type="text" name="txtCharacterName" />
+                    </td>
+                </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
