@@ -59,8 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CharacterController.cs" />
-    <Compile Include="Controllers\Default1Controller.cs" />
-    <Compile Include="Controllers\TestPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
