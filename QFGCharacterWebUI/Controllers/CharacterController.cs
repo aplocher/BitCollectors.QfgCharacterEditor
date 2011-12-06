@@ -12,5 +12,19 @@ namespace QFGCharacterWebUI.Controllers
             return View();
         }
 
+        public ActionResult CharacterStats()
+        {
+            return View();
+        }
+
+        public ActionResult Inventory()
+        {
+            return View();
+        }
+
+        public ActionResult MagicStats()
+        {
+            return View();
+        }
     }
 }

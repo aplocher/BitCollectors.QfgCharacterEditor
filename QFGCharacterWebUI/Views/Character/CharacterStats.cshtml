@@ -1,16 +1,103 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "QFG Character Editor";
+    ViewBag.SelectedTab = "CharacterStats";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>CharacterStats</title>
-</head>
-<body>
-    <div>
-        
-    </div>
-</body>
-</html>
+<form id="mainForm" method="post" action="">
+    <table cellpadding="0" cellspacing="0" border="0" class="tableData">
+    <tr>
+        <td class="tblHeading">Strength:</td>
+        <td>
+            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+        </td>
+        <td class="tblHeadingSpacer"></td>
+        <td class="tblHeading">Weapon Use:</td>
+        <td>
+            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+        </td>
+    </tr>
+    <tr>
+        <td class="tblHeading">Intelligence:</td>
+        <td>
+            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+        </td>
+        <td class="tblHeadingSpacer"></td>
+        <td class="tblHeading">Parry:</td>
+        <td>
+            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+        </td>
+    </tr>
+    <tr>
+        <td class="tblHeading">Agility:</td>
+        <td>
+            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+        </td>
+        <td class="tblHeadingSpacer"></td>
+        <td class="tblHeading">Dodge:</td>
+        <td>
+            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+        </td>
+    </tr>
+    <tr>
+        <td class="tblHeading">Vitality:</td>
+        <td>
+            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+        </td>
+        <td class="tblHeadingSpacer"></td>
+        <td class="tblHeading">Stealth:</td>
+        <td>
+            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+        </td>
+    </tr>
+    <tr>
+        <td class="tblHeading">Luck:</td>
+        <td>
+            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+        </td>
+        <td class="tblHeadingSpacer"></td>
+        <td class="tblHeading">Pick Locks:</td>
+        <td>
+            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+        </td>
+    </tr>
+    <tr>
+        <td class="tblHeading">Comm:</td>
+        <td>
+            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+        </td>
+        <td class="tblHeadingSpacer"></td>
+        <td class="tblHeading">Throwing:</td>
+        <td>
+            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+        </td>
+    </tr>
+    <tr>
+        <td class="tblHeading"></td>
+        <td></td>
+        <td class="tblHeadingSpacer"></td>
+        <td class="tblHeading">Climbing:</td>
+        <td>
+            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+        </td>
+    </tr>
+    <tr>
+        <td class="tblHeading"></td>
+        <td></td>
+        <td class="tblHeadingSpacer"></td>
+        <td class="tblHeading">Magic:</td>
+        <td>
+            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+        </td>
+    </tr>
+    <tr>
+        <td class="tblHeading"></td>
+        <td></td>
+        <td class="tblHeadingSpacer"></td>
+        <td class="tblHeading">Acrobatics:</td>
+        <td>
+            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+        </td>
+    </tr>
+    </table>
+</form>

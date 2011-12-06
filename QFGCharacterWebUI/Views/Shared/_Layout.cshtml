@@ -4,9 +4,106 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
     <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+
+        <style type="text/css">
+        body { font-family:helvetica, Arial; font-size:9pt; padding:0px; margin:0px;background-color:#eeeeee }
+
+        #menuContainer { padding:3px;background-color:#eaeaea;border-bottom: 1px solid #cccccc; }
+        #menuContainer a { background-color:#eeeeee; color:Black; }
+        #menuContainer a:hover { background-color:#eaeaea; border: 2px solid orange; margin:0px; color:Black;}
+
+        #tabContainer { height: 25px; }
+        #tabContainer a { height:15px; top:0px; display:block;width:111px;padding:4px;float:left; margin-right:3px; text-decoration:none;color:Black; border-left: 1px solid #999999; border-top: 2px solid #999999; border-right: 1px solid #999999;  }
+        #tabContainer a.selected { background-color:White;border-top:2px solid orange; }
+        #tabContainer a:hover { border-top: 2px solid orange; }
+
+        #tabBodyContainer { margin-top:-1px; background-color:White;padding:12px; min-height:300px; max-width:700px; border-left: 1px solid #999999; border-bottom: 1px solid #999999; border-right: 1px solid #999999; border-top:1px solid #999999;}
+
+        #pageContainer { padding:8px; position:relative; }
+
+        #loadDialog { position:absolute; top:120px; left:120px; background-color:white; border: 3px solid #999999; z-index:100; padding:10px; width:400px; height:130px; display:none; }
+        #loadDialog p { font-weight:bold; }
+
+        .tableData tr td { padding:2px; vertical-align:top; }
+        .tblHeading { font-weight:bold; padding-right:10px !important; }
+        .tblHeadingSpacer { width:35px; }
+
+        .menuButton { display:block;border: 1px solid #cccccc;text-decoration:none;width:80px;padding:3px;float:left;margin-right:3px; margin:1px; }
+        .menuButton img { vertical-align:bottom;border:0px; }
+        .menuSeparator { float:left;font-weight:bold;font-size:14pt;color:#cccccc;padding-right:3px;padding-left:3px; }
+        
+        .inputStat { width:35px; font-size:10pt; font-family:Arial; }
+    </style>
+
+    <script type="text/javascript">
+        function goPage(url) {
+            var form = document.getElementById('mainForm');
+            form.action = url;
+            form.submit();
+        }
+
+        function showLoadDialog() {
+            document.getElementById('loadDialog').style.display = 'block';
+            $('#pageContainer :input').attr('disabled', true);
+        }
+
+        function closeLoadDialog() {
+            $('#loadDialog').css('display', 'none');
+            $('#pageContainer :input').removeAttr('disabled');
+        }
+
+        $(function () {
+            $('#lnkLoad').click(function () { showLoadDialog(); });
+            $('#btnLoadCancel').click(function () { closeLoadDialog(); });
+            $('#btnLoadOK').click(function () { closeLoadDialog(); });
+        });
+    </script>
 </head>
 
 <body>
-    @RenderBody()
+    
+    <div id="loadDialog">
+        <p>
+            Select a file to open:
+        </p>
+        <input type="file" />
+        <div style="text-align:right;margin-top:40px;">
+            <input type="button" id="btnLoadOk" value="Load File" />
+            <input type="button" id="btnLoadCancel" value="Cancel" />
+        </div>
+    </div>
+
+    <div id="menuContainer">
+        <a href="#" id="lnkLoad" class="menuButton">
+            <img src="/Images/folder.png" alt="" />
+            Open
+        </a>
+
+        <a href="#" id="lnkSave" class="menuButton">
+            <img src="/Images/disk.png" alt="" />
+            Save
+        </a>
+
+        <span class="menuSeparator">|</span>
+
+        <a href="#" id="lnkMaxStats" class="menuButton">
+            <img src="/Images/page_white_get.png" alt="" />
+            Max Stats
+        </a>
+
+        <div style="clear:both"></div>
+    </div>
+    <div id="pageContainer">
+        <div id="tabContainer">
+            <a href="#" @((ViewBag.SelectedTab == "General") ? Html.Raw("class=\"selected\"") : Html.Raw("onclick=\"goPage('/Character/General');return false;\""))>General</a>
+            <a href="#" @((ViewBag.SelectedTab == "CharacterStats") ? Html.Raw("class=\"selected\"") : Html.Raw("onclick=\"goPage('/Character/CharacterStats');return false;\""))>Character Stats</a>
+            <a href="#" @((ViewBag.SelectedTab == "MagicStats") ? Html.Raw("class=\"selected\"") : Html.Raw("onclick=\"goPage('/Character/MagicStats');return false;\""))>Magic Stats</a>
+            <a href="#" @((ViewBag.SelectedTab == "Inventory") ? Html.Raw("class=\"selected\"") : Html.Raw("onclick=\"goPage('/Character/Inventory');return false;\""))>Inventory</a>
+        </div>
+        <div style="clear:both"></div>
+        <div id="tabBodyContainer">
+            @RenderBody()
+        </div>
+    </div>
 </body>
 </html>
