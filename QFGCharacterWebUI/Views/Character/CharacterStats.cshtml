@@ -1,4 +1,6 @@
-﻿@{
+﻿@model QfgCharacterLibrary.QfgCharacter
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "QFG Character Editor";
     ViewBag.SelectedTab = "CharacterStats";
@@ -9,67 +11,67 @@
     <tr>
         <td class="tblHeading">Strength:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Strength, new { @maxlength=3, @class="inputStat" })
         </td>
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Weapon Use:</td>
         <td>
-            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.WeaponUse, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Intelligence:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Intelligence, new { @maxlength=3, @class="inputStat" })
         </td>
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Parry:</td>
         <td>
-            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Parry, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Agility:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Agility, new { @maxlength=3, @class="inputStat" })
         </td>
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Dodge:</td>
         <td>
-            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Dodge, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Vitality:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Vitality, new { @maxlength=3, @class="inputStat" })
         </td>
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Stealth:</td>
         <td>
-            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Stealth, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Luck:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Luck, new { @maxlength=3, @class="inputStat" })
         </td>
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Pick Locks:</td>
         <td>
-            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.PickLocks, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Comm:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Communication, new { @maxlength=3, @class="inputStat" })
         </td>
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Throwing:</td>
         <td>
-            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Throwing, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
@@ -78,7 +80,7 @@
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Climbing:</td>
         <td>
-            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Climbing, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
@@ -87,7 +89,7 @@
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Magic:</td>
         <td>
-            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Magic, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
@@ -96,8 +98,27 @@
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Acrobatics:</td>
         <td>
-            <input type="text" name="txtWeaponUse" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.Acrobatics, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     </table>
+    @Html.HiddenFor(x => x.InventoryDaggers)
+    @Html.HiddenFor(x => x.InventoryHealingPotions)
+    @Html.HiddenFor(x => x.InventoryMagicPotions)
+    @Html.HiddenFor(x => x.InventoryVigorPotions)
+    @Html.HiddenFor(x => x.MagicSkillCalm)
+    @Html.HiddenFor(x => x.MagicSkillDazzle)
+    @Html.HiddenFor(x => x.MagicSkillDetect)
+    @Html.HiddenFor(x => x.MagicSkillFetch)
+    @Html.HiddenFor(x => x.MagicSkillFlame)
+    @Html.HiddenFor(x => x.MagicSkillForceBolt)
+    @Html.HiddenFor(x => x.MagicSkillLevitate)
+    @Html.HiddenFor(x => x.MagicSkillOpen)
+    @Html.HiddenFor(x => x.MagicSkillReversal)
+    @Html.HiddenFor(x => x.MagicSkillTrigger)
+    @Html.HiddenFor(x => x.MagicSkillZap)
+
+    @Html.HiddenFor(x => x.CharacterName)
+    @Html.HiddenFor(x => x.QfgClass)
+    @Html.HiddenFor(x => x.QfgGame)
 </form>

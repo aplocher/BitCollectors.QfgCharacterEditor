@@ -1,4 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using QfgCharacterLibrary;
+using System;
+using System.Web.Mvc;
+using System.Linq;
 
 namespace QFGCharacterWebUI.Controllers
 {
@@ -6,25 +9,33 @@ namespace QFGCharacterWebUI.Controllers
     {
         //
         // GET: /Character/
-
         public ActionResult General()
         {
-            return View();
+            return View(new QfgCharacter());
         }
 
-        public ActionResult CharacterStats()
+        [HttpPost]
+        public ActionResult General(QfgCharacter qfgCharacter)
         {
-            return View();
+            return View(qfgCharacter);
         }
 
-        public ActionResult Inventory()
+        [HttpPost]
+        public ActionResult CharacterStats(QfgCharacter qfgCharacter)
         {
-            return View();
+            return View(qfgCharacter);
         }
 
-        public ActionResult MagicStats()
+        [HttpPost]
+        public ActionResult Inventory(QfgCharacter qfgCharacter)
+        { 
+            return View(qfgCharacter);
+        }
+
+        [HttpPost]
+        public ActionResult MagicStats(QfgCharacter qfgCharacter)
         {
-            return View();
+            return View(qfgCharacter);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QFGCharacterWinUI", "QFGCharacterWinUI\QFGCharacterWinUI.csproj", "{10A415AB-FA6E-4684-B0DC-5511472EA75E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QfgCharacterLibrary", "QfgCharacterLibrary\QfgCharacterLibrary.csproj", "{93036471-F036-44F5-B281-6933E0AC9F22}"
@@ -8,18 +8,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QFGCharacterWebUI", "QFGCharacterWebUI\QFGCharacterWebUI.csproj", "{D1212C24-12CC-4600-9631-C1266A0FA0FF}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs29
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = QFGCharacterWinUI\\QFGCharacterWinUI.csproj
-		SccProjectName1 = QFGCharacterWinUI
-		SccLocalPath1 = QFGCharacterWinUI
-		SccProjectUniqueName2 = QfgCharacterLibrary\\QfgCharacterLibrary.csproj
-		SccProjectName2 = QfgCharacterLibrary
-		SccLocalPath2 = QfgCharacterLibrary
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms

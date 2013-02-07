@@ -9,3 +9,5 @@ C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharact
 C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.exe
 C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.pdb
+C:\SourceGit\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.exe
+C:\SourceGit\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.pdb

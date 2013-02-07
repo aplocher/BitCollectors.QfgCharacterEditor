@@ -5,3 +5,10 @@ C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharact
 C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.pdb
 C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWebUI\bin\QfgCharacterLibrary.dll
 C:\SourceCode\GitRepositories\QFGCharacterEditor\QFG-Character-Editor\QFGCharacterWebUI\bin\QfgCharacterLibrary.pdb
+C:\SourceGit\QFG-Character-Editor\QFGCharacterWebUI\bin\QFGCharacterWebUI.dll
+C:\SourceGit\QFG-Character-Editor\QFGCharacterWebUI\bin\QFGCharacterWebUI.pdb
+C:\SourceGit\QFG-Character-Editor\QFGCharacterWebUI\bin\QfgCharacterLibrary.dll
+C:\SourceGit\QFG-Character-Editor\QFGCharacterWebUI\bin\QfgCharacterLibrary.pdb
+C:\SourceGit\QFG-Character-Editor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.csprojResolveAssemblyReference.cache
+C:\SourceGit\QFG-Character-Editor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.dll
+C:\SourceGit\QFG-Character-Editor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.pdb

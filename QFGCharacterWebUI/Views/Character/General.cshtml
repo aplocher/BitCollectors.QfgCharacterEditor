@@ -1,4 +1,8 @@
-﻿@{
+﻿@using QFGCharacterWebUI.HtmlHelpers
+
+@model QfgCharacterLibrary.QfgCharacter
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "QFG Character Editor";
     ViewBag.SelectedTab = "General";
@@ -9,22 +13,50 @@
     <tr>
         <td class="tblHeading">Game:</td>
         <td>
-            <select>
-            </select>
+            @Html.DropDownListFor(x => x.QfgGame, @Model.QfgGame.ToSelectList())
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Class:</td>
         <td>
-            <select>
-            </select>
+            @Html.DropDownListFor(x => x.QfgClass, @Model.QfgClass.ToSelectList())
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Character Name:</td>
         <td>
-            <input type="text" name="txtCharacterName" />
+            @Html.TextBoxFor(x => x.CharacterName)
         </td>
     </tr>
     </table>
+    @Html.HiddenFor(x => x.Acrobatics)
+    @Html.HiddenFor(x => x.Agility)
+    @Html.HiddenFor(x => x.Climbing)
+    @Html.HiddenFor(x => x.Communication)
+    @Html.HiddenFor(x => x.Dodge)
+    @Html.HiddenFor(x => x.Intelligence)
+    @Html.HiddenFor(x => x.InventoryDaggers)
+    @Html.HiddenFor(x => x.InventoryHealingPotions)
+    @Html.HiddenFor(x => x.InventoryMagicPotions)
+    @Html.HiddenFor(x => x.InventoryVigorPotions)
+    @Html.HiddenFor(x => x.Luck)
+    @Html.HiddenFor(x => x.Magic)
+    @Html.HiddenFor(x => x.MagicSkillCalm)
+    @Html.HiddenFor(x => x.MagicSkillDazzle)
+    @Html.HiddenFor(x => x.MagicSkillDetect)
+    @Html.HiddenFor(x => x.MagicSkillFetch)
+    @Html.HiddenFor(x => x.MagicSkillFlame)
+    @Html.HiddenFor(x => x.MagicSkillForceBolt)
+    @Html.HiddenFor(x => x.MagicSkillLevitate)
+    @Html.HiddenFor(x => x.MagicSkillOpen)
+    @Html.HiddenFor(x => x.MagicSkillReversal)
+    @Html.HiddenFor(x => x.MagicSkillTrigger)
+    @Html.HiddenFor(x => x.MagicSkillZap)
+    @Html.HiddenFor(x => x.Parry)
+    @Html.HiddenFor(x => x.PickLocks)
+    @Html.HiddenFor(x => x.Stealth)
+    @Html.HiddenFor(x => x.Strength)
+    @Html.HiddenFor(x => x.Throwing)
+    @Html.HiddenFor(x => x.Vitality)
+    @Html.HiddenFor(x => x.WeaponUse)
 </form>
