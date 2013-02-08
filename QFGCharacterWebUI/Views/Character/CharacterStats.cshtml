@@ -6,6 +6,55 @@
     ViewBag.SelectedTab = "CharacterStats";
 }
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#mainForm").validate({
+            errorPlacement: function (error, element) {
+                var errorText = error.text();
+
+                if (errorText == "") {
+                    if (element.next("span") != null) {
+                        element.next("span").remove();
+                    }
+                }
+                else {
+                    if (element.next("span").html() != "*") {
+                        element.parent().append("<span style='color:red;font-weight:bold'>*</span>").attr('title', errorText);
+                    }
+                    //element.next("span").css("display", "inline").attr('title', error.text());
+                }
+            },
+            success: function (label) {
+                if (label.next("span") != null) {
+                    label.next("span").remove();
+                }
+            }
+        });
+
+        jQuery.validator.addClassRules("inputStat", {
+            required: true,
+            range: [0,100]
+        });
+
+        //$(".inputStat").each(function () {
+        //    $(this).rules("add", {
+        //        required: true,
+        //        number: true,
+        //        max: 100,
+        //        min: 0,
+        //        messages: {
+        //            required: "You must specify a value",
+        //            number: "Value must be numeric",
+        //            min: jQuery.format("Value cannot be less than {0}"),
+        //            max: jQuery.format("Value must not be greater than {0}")
+        //        }
+        //    });
+        //});
+    });
+</script>
+
+@*@Html.Partial("_Toolbar", ViewData.Model)*@
+
 <form id="mainForm" method="post" action="">
     <table cellpadding="0" cellspacing="0" border="0" class="tableData">
     <tr>
@@ -66,7 +115,7 @@
     <tr>
         <td class="tblHeading">Comm:</td>
         <td>
-            @Html.TextBoxFor(x => x.Communication, new { @maxlength=3, @class="inputStat" })
+            @Html.TextBoxFor(x => x.Communication, (Model.CommunicationEnabled) ? (object)new { @maxlength=3, @class="inputStat"} : (object)new { @maxlength=3, @class="inputStat", @disabled="disabled" })
         </td>
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Throwing:</td>
@@ -98,7 +147,7 @@
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Acrobatics:</td>
         <td>
-            @Html.TextBoxFor(x => x.Acrobatics, new { @maxlength=3, @class="inputStat" })
+            @Html.TextBoxFor(x => x.Acrobatics, (Model.AcrobaticsEnabled) ? (object)new { @maxlength=3, @class="inputStat"} : (object)new { @maxlength=3, @class="inputStat", @disabled="disabled" })
         </td>
     </tr>
     </table>

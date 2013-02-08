@@ -98,6 +98,7 @@
     <None Include="Images\QFG1-Fighter.jpg" />
     <None Include="Images\QFG1-Mage.jpg" />
     <None Include="Images\QFG1-Thief.jpg" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -127,6 +128,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Toolbar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

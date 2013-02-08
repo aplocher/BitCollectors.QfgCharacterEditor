@@ -1,4 +1,6 @@
-﻿@{
+﻿@model QfgCharacterLibrary.QfgCharacter
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "QFG Character Editor";
     ViewBag.SelectedTab = "MagicStats";
@@ -9,69 +11,92 @@
     <tr>
         <td class="tblHeading">Open:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.MagicSkillOpen, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Detect:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.MagicSkillDetect, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Trigger:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.MagicSkillTrigger, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Dazzle:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.MagicSkillDazzle, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Zap:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.MagicSkillZap, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Calm:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.MagicSkillCalm, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Flame:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.MagicSkillFlame, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Fetch:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.MagicSkillFetch, new { @maxlength=3, @class="inputStat" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Force Bolt:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.MagicSkillForceBolt, (Model.MagicSkillForceBoltEnabled) ? (object)new { @maxlength=3, @class="inputStat"} : (object)new { @maxlength=3, @class="inputStat", @disabled="disabled" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Levitate:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.MagicSkillLevitate, (Model.MagicSkillLevitateEnabled) ? (object)new { @maxlength=3, @class="inputStat"} : (object)new { @maxlength=3, @class="inputStat", @disabled="disabled" })
         </td>
     </tr>
     <tr>
         <td class="tblHeading">Reversal:</td>
         <td>
-            <input type="text" name="txtStrength" class="inputStat" maxlength="3" />
+            @Html.TextBoxFor(x => x.MagicSkillReversal, (Model.MagicSkillReversalEnabled) ? (object)new { @maxlength=3, @class="inputStat"} : (object)new { @maxlength=3, @class="inputStat", @disabled="disabled" })
         </td>
     </tr>
 
     </table>
+
+    @Html.HiddenFor(x => x.Acrobatics)
+    @Html.HiddenFor(x => x.Agility)
+    @Html.HiddenFor(x => x.Climbing)
+    @Html.HiddenFor(x => x.Communication)
+    @Html.HiddenFor(x => x.Dodge)
+    @Html.HiddenFor(x => x.Intelligence)
+    @Html.HiddenFor(x => x.InventoryDaggers)
+    @Html.HiddenFor(x => x.InventoryHealingPotions)
+    @Html.HiddenFor(x => x.InventoryMagicPotions)
+    @Html.HiddenFor(x => x.InventoryVigorPotions)
+    @Html.HiddenFor(x => x.Luck)
+    @Html.HiddenFor(x => x.Magic)
+    @Html.HiddenFor(x => x.Parry)
+    @Html.HiddenFor(x => x.PickLocks)
+    @Html.HiddenFor(x => x.Stealth)
+    @Html.HiddenFor(x => x.Strength)
+    @Html.HiddenFor(x => x.Throwing)
+    @Html.HiddenFor(x => x.Vitality)
+    @Html.HiddenFor(x => x.WeaponUse)
+    @Html.HiddenFor(x => x.CharacterName)
+    @Html.HiddenFor(x => x.QfgClass)
+    @Html.HiddenFor(x => x.QfgGame)
 </form>
