@@ -13,7 +13,7 @@
     <tr>
         <td class="tblHeading">Game:</td>
         <td>
-            @Html.DropDownListFor(x => x.QfgGame, @Model.QfgGame.ToSelectList())
+            @Html.DropDownListFor(x => x.QfgGame, @Model.QfgGame.ToSelectList(), new { @disabled = "disabled" })
         </td>
     </tr>
     <tr>
@@ -59,4 +59,6 @@
     @Html.HiddenFor(x => x.Throwing)
     @Html.HiddenFor(x => x.Vitality)
     @Html.HiddenFor(x => x.WeaponUse)
+
+    @Html.Hidden("Page", "General")
 </form>

@@ -5,6 +5,8 @@ namespace QfgCharacterLibrary.GameInfo
 {
     public class Qfg1GameInfo : IQfgGameInfo
     {
+        #region IQfgGameInfo Members
+
         public int MaxCharacterStatValue
         {
             get { return 100; }
@@ -172,9 +174,6 @@ namespace QfgCharacterLibrary.GameInfo
         {
             get { return false; }
         }
-
-        #region IQfgGameInfo Members
-
 
         public bool HasCommunication
         {

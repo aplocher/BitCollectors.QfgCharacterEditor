@@ -43,3 +43,8 @@ C:\SourceGit\QFG-Character-Editor\QfgCharacterLibrary\bin\Debug\QfgCharacterLibr
 C:\SourceGit\QFG-Character-Editor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.csprojResolveAssemblyReference.cache
 C:\SourceGit\QFG-Character-Editor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.dll
 C:\SourceGit\QFG-Character-Editor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.pdb
+C:\SourceCode\GitRepositories\QFG-Character-Editor\QfgCharacterLibrary\bin\Debug\QfgCharacterLibrary.dll
+C:\SourceCode\GitRepositories\QFG-Character-Editor\QfgCharacterLibrary\bin\Debug\QfgCharacterLibrary.pdb
+C:\SourceCode\GitRepositories\QFG-Character-Editor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.csprojResolveAssemblyReference.cache
+C:\SourceCode\GitRepositories\QFG-Character-Editor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.dll
+C:\SourceCode\GitRepositories\QFG-Character-Editor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.pdb

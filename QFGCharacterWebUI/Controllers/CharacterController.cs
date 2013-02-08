@@ -2,13 +2,14 @@
 using System;
 using System.Web.Mvc;
 using System.Linq;
+using System.Web;
+using System.IO;
+using System.Text;
 
 namespace QFGCharacterWebUI.Controllers
 {
     public class CharacterController : Controller
     {
-        //
-        // GET: /Character/
         public ActionResult General()
         {
             return View(new QfgCharacter());
@@ -17,27 +18,41 @@ namespace QFGCharacterWebUI.Controllers
         [HttpPost]
         public ActionResult General(QfgCharacter qfgCharacter)
         {
-            //qfgCharacter.SetMaxValues();
-            //qfgCharacter.CharacterName = "Blah2";
             return View(qfgCharacter);
         }
 
         [HttpPost]
         public ActionResult CharacterStats(QfgCharacter qfgCharacter)
         {
+            ViewBag.MaxCharacterStats = qfgCharacter.QfgGameInfo.MaxCharacterStatValue;
+
             return View(qfgCharacter);
         }
 
         [HttpPost]
         public ActionResult Inventory(QfgCharacter qfgCharacter)
         {
+            ViewBag.MaxDaggers = qfgCharacter.QfgGameInfo.MaxDaggers;
+            ViewBag.MaxHealingPotions = qfgCharacter.QfgGameInfo.MaxHealingPotions;
+            ViewBag.MaxMagicPotions = qfgCharacter.QfgGameInfo.MaxMagicPotions;
+            ViewBag.MaxVigorPotions = qfgCharacter.QfgGameInfo.MaxVigorPotions;
+
             return View(qfgCharacter);
         }
 
         [HttpPost]
         public ActionResult MagicStats(QfgCharacter qfgCharacter)
         {
+            ViewBag.MaxMagicStats = qfgCharacter.QfgGameInfo.MaxMagicStatValue;
+
             return View(qfgCharacter);
+        }
+
+        public ActionResult MaxStats()
+        {
+            QfgCharacter qfgCharacter = new QfgCharacter();
+            qfgCharacter.SetMaxValues();
+            return View("General", qfgCharacter);
         }
 
         [HttpPost]
@@ -78,7 +93,38 @@ namespace QFGCharacterWebUI.Controllers
 
             qfgCharacter.SetMaxValues();
 
+            return View(Request.Form["Page"], qfgCharacter);
+        }
+
+        [HttpPost]
+        public ActionResult Load(HttpPostedFileBase file)
+        {
+            QfgCharacter qfgCharacter = new QfgCharacter();
+
+            if (file.ContentLength > 0)
+            {
+                using (var reader = new StreamReader(file.InputStream))
+                {
+                    string characterFileString = reader.ReadToEnd();
+
+                    string[] filePieces = characterFileString.Split('\n');
+
+                    if (filePieces.Length > 1)
+                    {
+                        qfgCharacter.LoadCharacter(filePieces[0].Trim(), filePieces[1]);
+                    }
+                }
+            }
+
             return View("General", qfgCharacter);
+        }
+
+        [HttpPost]
+        public ActionResult Save(QfgCharacter qfgCharacter)
+        {
+            string characterString = qfgCharacter.Encode();
+
+            return File(Encoding.ASCII.GetBytes(characterString), "application/force-download", "character.sav");
         }
     }
 }
