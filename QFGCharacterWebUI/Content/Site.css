@@ -1,5 +1,4 @@
-body
-{
+body {
     font-size: 75%;
     font-family: Verdana, Tahoma, Arial, "Helvetica Neue", Helvetica, Sans-Serif;
     color: #232323;
@@ -9,60 +8,207 @@ body
 /* Styles for basic forms
 -----------------------------------------------------------*/
 
-fieldset 
-{
-    border:1px solid #ddd;
-    padding:0 1.4em 1.4em 1.4em;
-    margin:0 0 1.5em 0;
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
 }
 
-legend 
-{
-    font-size:1.2em;
+legend {
+    font-size: 1.2em;
     font-weight: bold;
 }
 
-textarea 
-{
+textarea {
     min-height: 75px;
 }
 
-.editor-label 
-{
+.editor-label {
     margin: 1em 0 0 0;
 }
 
-.editor-field 
-{
-    margin:0.5em 0 0 0;
+.editor-field {
+    margin: 0.5em 0 0 0;
 }
 
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
-.field-validation-error
-{
+.field-validation-error {
     color: #ff0000;
 }
 
-.field-validation-valid
-{
+.field-validation-valid {
     display: none;
 }
 
-.input-validation-error
-{
+.input-validation-error {
     border: 1px solid #ff0000;
     background-color: #ffeeee;
 }
 
-.validation-summary-errors
-{
+.validation-summary-errors {
     font-weight: bold;
     color: #ff0000;
 }
 
-.validation-summary-valid
-{
+.validation-summary-valid {
     display: none;
+}
+
+
+
+
+body {
+    font-family: helvetica, Arial;
+    font-size: 9pt;
+    padding: 0px;
+    margin: 0px;
+    background-color: #eeeeee;
+}
+
+h1 {
+    padding-left: 5px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    color: white;
+    margin: 0px;
+    background-color: #666666;
+}
+
+#menuContainer {
+    padding: 5px;
+    background-color: #eaeaea;
+    border-bottom: 1px solid #cccccc;
+}
+
+    #menuContainer a {
+        background-color: #eeeeee;
+        color: Black;
+    }
+
+        #menuContainer a:hover {
+            background-color: #eaeaea;
+            border: 2px solid orange;
+            margin: 0px;
+            color: Black;
+        }
+
+    #menuContainer img {
+        width: 16px;
+        height: 16px;
+    }
+
+#tabContainer {
+    height: 25px;
+}
+
+    #tabContainer a {
+        height: 15px;
+        top: 0px;
+        display: block;
+        width: 111px;
+        padding: 4px;
+        float: left;
+        margin-right: 3px;
+        text-decoration: none;
+        color: Black;
+        border-left: 1px solid #999999;
+        border-top: 2px solid #999999;
+        border-right: 1px solid #999999;
+    }
+
+        #tabContainer a.selected {
+            background-color: White;
+            border-top: 2px solid orange;
+        }
+
+        #tabContainer a:hover {
+            border-top: 2px solid orange;
+        }
+
+#tabBodyContainer {
+    margin-top: -1px;
+    background-color: White;
+    padding: 12px;
+    min-height: 300px;
+    max-width: 700px;
+    border-left: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-top: 1px solid #999999;
+}
+
+#pageContainer {
+    padding: 8px;
+    position: relative;
+}
+
+#loadDialog {
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    background-color: white;
+    border: 3px solid #999999;
+    z-index: 100;
+    padding: 10px;
+    width: 400px;
+    height: 130px;
+    display: none;
+}
+
+    #loadDialog p {
+        font-weight: bold;
+    }
+
+#divCharacterImg {
+    width: 150px;
+    height: 200px;
+    float: right;
+    background-repeat: no-repeat;
+}
+
+.tableData tr td {
+    padding: 2px;
+    vertical-align: top;
+}
+
+.tblHeading {
+    font-weight: bold;
+    padding-right: 10px !important;
+}
+
+.tblHeadingSpacer {
+    width: 35px;
+}
+
+.menuButton {
+    display: block;
+    border: 1px solid #cccccc;
+    text-decoration: none;
+    width: 80px;
+    padding: 3px;
+    float: left;
+    margin-right: 3px;
+    margin: 1px;
+}
+
+    .menuButton img {
+        vertical-align: bottom;
+        border: 0px;
+    }
+
+.menuSeparator {
+    float: left;
+    font-weight: bold;
+    font-size: 14pt;
+    color: #cccccc;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.inputStat {
+    width: 35px;
+    font-size: 10pt;
+    font-family: Arial;
 }

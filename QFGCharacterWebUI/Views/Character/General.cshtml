@@ -8,7 +8,64 @@
     ViewBag.SelectedTab = "General";
 }
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#QfgClass").change(function () {
+            changeCharacterImage();
+        });
+
+        $("#mainForm").validate({
+            rules: {
+                CharacterName: {
+                    required: true
+                }
+            },
+            errorPlacement: function (error, element) {
+                var errorText = error.text();
+
+                if (errorText == "") {
+                    if (element.next("span") != null) {
+                        element.next("span").remove();
+                    }
+                }
+                else {
+                    if (element.next("span").html() != "*") {
+                        element.parent().append("<span style='color:red;font-weight:bold'>*</span>").attr('title', errorText);
+                    }
+                }
+            },
+            success: function (label) {
+                if (label.next("span") != null) {
+                    label.next("span").remove();
+                }
+            }
+        });
+
+        function changeCharacterImage() {
+            var selectedVal = $("#QfgClass").val();
+
+            switch (selectedVal) {
+                case "Fighter":
+                    $("#divCharacterImg").css("background-image", "url('/Images/QFG1-Fighter.jpg')");
+                    break;
+
+                case "Magic":
+                    $("#divCharacterImg").css("background-image", "url('/Images/QFG1-Mage.jpg')");
+                    break;
+
+                case "Thief":
+                    $("#divCharacterImg").css("background-image", "url('/Images/QFG1-Thief.jpg')");
+                    break;
+            }
+        }
+
+        changeCharacterImage();
+    });
+</script>
+
 <form id="mainForm" method="post" action="">
+    <div id="divCharacterImg"></div>
+
     <table cellpadding="0" cellspacing="0" border="0" class="tableData">
     <tr>
         <td class="tblHeading">Game:</td>
@@ -19,7 +76,7 @@
     <tr>
         <td class="tblHeading">Class:</td>
         <td>
-            @Html.DropDownListFor(x => x.QfgClass, @Model.QfgClass.ToSelectList())
+            @Html.DropDownListFor(x => x.QfgClass, (Model.QfgGameInfo.HasPaladin ? Model.QfgClass.ToSelectList() : Model.QfgClass.ToSelectList("Paladin")))
         </td>
     </tr>
     <tr>

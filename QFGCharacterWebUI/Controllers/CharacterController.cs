@@ -21,12 +21,22 @@ namespace QFGCharacterWebUI.Controllers
             return View(qfgCharacter);
         }
 
+        public ActionResult CharacterStats()
+        {
+            return RedirectToAction("General");
+        }
+
         [HttpPost]
         public ActionResult CharacterStats(QfgCharacter qfgCharacter)
         {
             ViewBag.MaxCharacterStats = qfgCharacter.QfgGameInfo.MaxCharacterStatValue;
 
             return View(qfgCharacter);
+        }
+
+        public ActionResult Inventory()
+        {
+            return RedirectToAction("General");
         }
 
         [HttpPost]
@@ -38,6 +48,11 @@ namespace QFGCharacterWebUI.Controllers
             ViewBag.MaxVigorPotions = qfgCharacter.QfgGameInfo.MaxVigorPotions;
 
             return View(qfgCharacter);
+        }
+
+        public ActionResult MagicStats()
+        {
+            return RedirectToAction("General");
         }
 
         [HttpPost]

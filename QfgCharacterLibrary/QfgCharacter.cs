@@ -651,8 +651,7 @@ namespace QfgCharacterLibrary
             int prev = 0;// x53;
             int index = 0;
             List<int> encodedVal = new List<int>();
-            //List<int> decodedValues = new List<int>();
-            string decodedStr = "";
+
             foreach (int val in decodedStrArray)
             {
                 int encoded = val;

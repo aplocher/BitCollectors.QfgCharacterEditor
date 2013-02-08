@@ -15,5 +15,14 @@ namespace QFGCharacterWebUI.HtmlHelpers
 
             return new SelectList(values, "Id", "Name", enumObj);
         }
+
+        public static SelectList ToSelectList<TEnum>(this TEnum enumObj, string except)
+        {
+            var values = from TEnum e in Enum.GetValues(typeof(TEnum))
+                         where e.ToString() != except
+                         select new { Id = e, Name = e.ToString() };
+
+            return new SelectList(values, "Id", "Name", enumObj);
+        }
     }
 }
