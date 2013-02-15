@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Enums.cs" />
     <Compile Include="GameInfo\Qfg1GameInfo.cs" />
+    <Compile Include="GameInfo\Qfg2GameInfo.cs" />
     <Compile Include="Interfaces\IQfgGameInfo.cs" />
     <Compile Include="QfgCharacter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

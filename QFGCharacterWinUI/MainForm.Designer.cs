@@ -111,6 +111,8 @@
             this.tbtnMaxValues = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tlblCurrentFile = new System.Windows.Forms.ToolStripStatusLabel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.qfgCharacterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -245,8 +247,8 @@
             // 
             // textBox32
             // 
-            this.textBox32.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillForceBolt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox32.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "MagicSkillReversalEnabled", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox32.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillReversal", true));
             this.textBox32.Location = new System.Drawing.Point(95, 264);
             this.textBox32.Name = "textBox32";
             this.textBox32.Size = new System.Drawing.Size(68, 20);
@@ -255,8 +257,8 @@
             // 
             // textBox31
             // 
-            this.textBox31.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillForceBolt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox31.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "MagicSkillLevitateEnabled", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox31.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillLevitate", true));
             this.textBox31.Location = new System.Drawing.Point(95, 238);
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new System.Drawing.Size(68, 20);
@@ -446,6 +448,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox3);
+            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.textBox2);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.textBox1);
@@ -491,7 +495,7 @@
             this.textBox2.Location = new System.Drawing.Point(268, 208);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(68, 20);
-            this.textBox2.TabIndex = 29;
+            this.textBox2.TabIndex = 31;
             // 
             // label2
             // 
@@ -499,25 +503,25 @@
             this.label2.Location = new System.Drawing.Point(192, 212);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 28;
+            this.label2.TabIndex = 30;
             this.label2.Text = "Acrobatics";
             // 
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "Communication", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "CommunicationEnabled", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox1.Location = new System.Drawing.Point(88, 131);
+            this.textBox1.Location = new System.Drawing.Point(88, 136);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 27;
+            this.textBox1.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 135);
+            this.label1.Location = new System.Drawing.Point(18, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 26;
+            this.label1.TabIndex = 10;
             this.label1.Text = "Comm";
             // 
             // textBox5
@@ -526,7 +530,7 @@
             this.textBox5.Location = new System.Drawing.Point(268, 184);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(68, 20);
-            this.textBox5.TabIndex = 25;
+            this.textBox5.TabIndex = 29;
             this.textBox5.Validating += new System.ComponentModel.CancelEventHandler(this.characterStats_Validating);
             // 
             // textBox6
@@ -535,7 +539,7 @@
             this.textBox6.Location = new System.Drawing.Point(268, 160);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(68, 20);
-            this.textBox6.TabIndex = 23;
+            this.textBox6.TabIndex = 27;
             this.textBox6.Validating += new System.ComponentModel.CancelEventHandler(this.characterStats_Validating);
             // 
             // textBox7
@@ -544,7 +548,7 @@
             this.textBox7.Location = new System.Drawing.Point(268, 136);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(68, 20);
-            this.textBox7.TabIndex = 21;
+            this.textBox7.TabIndex = 25;
             this.textBox7.Validating += new System.ComponentModel.CancelEventHandler(this.characterStats_Validating);
             // 
             // textBox8
@@ -553,7 +557,7 @@
             this.textBox8.Location = new System.Drawing.Point(268, 112);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(68, 20);
-            this.textBox8.TabIndex = 19;
+            this.textBox8.TabIndex = 23;
             this.textBox8.Validating += new System.ComponentModel.CancelEventHandler(this.characterStats_Validating);
             // 
             // textBox9
@@ -562,7 +566,7 @@
             this.textBox9.Location = new System.Drawing.Point(268, 88);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(68, 20);
-            this.textBox9.TabIndex = 17;
+            this.textBox9.TabIndex = 21;
             this.textBox9.Validating += new System.ComponentModel.CancelEventHandler(this.characterStats_Validating);
             // 
             // textBox10
@@ -571,7 +575,7 @@
             this.textBox10.Location = new System.Drawing.Point(268, 64);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(68, 20);
-            this.textBox10.TabIndex = 15;
+            this.textBox10.TabIndex = 19;
             this.textBox10.Validating += new System.ComponentModel.CancelEventHandler(this.characterStats_Validating);
             // 
             // textBox11
@@ -580,7 +584,7 @@
             this.textBox11.Location = new System.Drawing.Point(268, 40);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(68, 20);
-            this.textBox11.TabIndex = 13;
+            this.textBox11.TabIndex = 17;
             this.textBox11.Validating += new System.ComponentModel.CancelEventHandler(this.characterStats_Validating);
             // 
             // textBox12
@@ -589,13 +593,13 @@
             this.textBox12.Location = new System.Drawing.Point(268, 16);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(68, 20);
-            this.textBox12.TabIndex = 11;
+            this.textBox12.TabIndex = 15;
             this.textBox12.Validating += new System.ComponentModel.CancelEventHandler(this.characterStats_Validating);
             // 
             // textBox13
             // 
             this.textBox13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "Luck", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox13.Location = new System.Drawing.Point(88, 108);
+            this.textBox13.Location = new System.Drawing.Point(88, 112);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(68, 20);
             this.textBox13.TabIndex = 9;
@@ -604,7 +608,7 @@
             // textBox14
             // 
             this.textBox14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "Vitality", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox14.Location = new System.Drawing.Point(88, 85);
+            this.textBox14.Location = new System.Drawing.Point(88, 88);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(68, 20);
             this.textBox14.TabIndex = 7;
@@ -613,7 +617,7 @@
             // textBox15
             // 
             this.textBox15.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "Agility", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox15.Location = new System.Drawing.Point(88, 62);
+            this.textBox15.Location = new System.Drawing.Point(88, 64);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(68, 20);
             this.textBox15.TabIndex = 5;
@@ -622,7 +626,7 @@
             // textBox16
             // 
             this.textBox16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "Intelligence", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox16.Location = new System.Drawing.Point(88, 39);
+            this.textBox16.Location = new System.Drawing.Point(88, 40);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(68, 20);
             this.textBox16.TabIndex = 3;
@@ -643,7 +647,7 @@
             this.label17.Location = new System.Drawing.Point(192, 188);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(36, 13);
-            this.label17.TabIndex = 24;
+            this.label17.TabIndex = 28;
             this.label17.Text = "Magic";
             // 
             // label18
@@ -652,7 +656,7 @@
             this.label18.Location = new System.Drawing.Point(192, 164);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(46, 13);
-            this.label18.TabIndex = 22;
+            this.label18.TabIndex = 26;
             this.label18.Text = "Climbing";
             // 
             // label19
@@ -661,7 +665,7 @@
             this.label19.Location = new System.Drawing.Point(192, 140);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(51, 13);
-            this.label19.TabIndex = 20;
+            this.label19.TabIndex = 24;
             this.label19.Text = "Throwing";
             // 
             // label20
@@ -670,7 +674,7 @@
             this.label20.Location = new System.Drawing.Point(192, 116);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(60, 13);
-            this.label20.TabIndex = 18;
+            this.label20.TabIndex = 22;
             this.label20.Text = "Pick Locks";
             // 
             // label21
@@ -679,7 +683,7 @@
             this.label21.Location = new System.Drawing.Point(192, 92);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(40, 13);
-            this.label21.TabIndex = 16;
+            this.label21.TabIndex = 20;
             this.label21.Text = "Stealth";
             // 
             // label22
@@ -688,7 +692,7 @@
             this.label22.Location = new System.Drawing.Point(192, 68);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(39, 13);
-            this.label22.TabIndex = 14;
+            this.label22.TabIndex = 18;
             this.label22.Text = "Dodge";
             // 
             // label23
@@ -697,7 +701,7 @@
             this.label23.Location = new System.Drawing.Point(192, 44);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(31, 13);
-            this.label23.TabIndex = 12;
+            this.label23.TabIndex = 16;
             this.label23.Text = "Parry";
             // 
             // label24
@@ -706,13 +710,13 @@
             this.label24.Location = new System.Drawing.Point(192, 20);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(70, 13);
-            this.label24.TabIndex = 10;
+            this.label24.TabIndex = 14;
             this.label24.Text = "Weapon Use";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(18, 112);
+            this.label25.Location = new System.Drawing.Point(18, 116);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(31, 13);
             this.label25.TabIndex = 8;
@@ -721,7 +725,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(18, 89);
+            this.label26.Location = new System.Drawing.Point(18, 92);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(37, 13);
             this.label26.TabIndex = 6;
@@ -730,7 +734,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(18, 66);
+            this.label27.Location = new System.Drawing.Point(18, 68);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(34, 13);
             this.label27.TabIndex = 4;
@@ -739,7 +743,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(18, 43);
+            this.label28.Location = new System.Drawing.Point(18, 44);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(61, 13);
             this.label28.TabIndex = 2;
@@ -793,7 +797,6 @@
             // cboQfgGames
             // 
             this.cboQfgGames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboQfgGames.Enabled = false;
             this.cboQfgGames.FormattingEnabled = true;
             this.cboQfgGames.Location = new System.Drawing.Point(113, 14);
             this.cboQfgGames.Name = "cboQfgGames";
@@ -940,6 +943,24 @@
             this.tlblCurrentFile.Name = "tlblCurrentFile";
             this.tlblCurrentFile.Size = new System.Drawing.Size(0, 17);
             // 
+            // textBox3
+            // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "HonorEnabled", true));
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "Honor", true));
+            this.textBox3.Location = new System.Drawing.Point(88, 160);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(68, 20);
+            this.textBox3.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Honor";
+            // 
             // qfgCharacterBindingSource
             // 
             this.qfgCharacterBindingSource.DataSource = typeof(QfgCharacterLibrary.QfgCharacter);
@@ -1065,6 +1086,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label3;
     }
 }
 

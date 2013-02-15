@@ -2,76 +2,143 @@
 using QfgCharacterLibrary.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace QfgCharacterLibrary.GameInfo
 {
-    public class Qfg1GameInfo : IQfgGameInfo
+    public class Qfg2GameInfo: IQfgGameInfo
     {
-        #region IQfgGameInfo Members
-
         public int MaxCharacterStatValue
         {
-            get { return 100; }
+            get { return 200; }
+        }
+
+        public int MaxMagicStatValue
+        {
+            get { return 200; }
+        }
+
+        public int MaxDaggers
+        {
+            get { return 10; }
+        }
+
+        public int MaxHealingPotions
+        {
+            get { return 5; }
+        }
+
+        public int MaxVigorPotions
+        {
+            get { return 5; }
+        }
+
+        public int MaxMagicPotions
+        {
+            get { return 5; }
+        }
+
+        public bool HasCommunication
+        {
+            get { return true; }
+        }
+
+        public bool HasHonor
+        {
+            get { return true; }
+        }
+
+        public bool HasAcrobatics
+        {
+            get { return false; }
+        }
+
+        public bool HasForceBoltMagic
+        {
+            get { return true; }
+        }
+
+        public bool HasLevitate
+        {
+            get { return true; }
+        }
+
+        public bool HasReversal
+        {
+            get { return true; }
+        }
+
+        public bool HasPaladin
+        {
+            get { return true; }
         }
 
         public void LoadMappings(int index, int value, QfgCharacter character)
         {
             switch (index)
             {
-                case 39:
+                case 44:
                     character.CheckSum2 = value;
                     break;
-
-                case 38:
+                case 43:
                     character.CheckSum1 = value;
                     break;
 
-                case 34:
-                    character.InventoryVigorPotions = value;
-                    break;
-
-                case 33:
-                    character.InventoryMagicPotions = value;
-                    break;
-
-                case 32:
-                    character.InventoryHealingPotions = value;
-                    break;
-
-                case 31:
+                case 36:
                     character.InventoryDaggers = value;
                     break;
 
-                case 23:
+                case 25:
                     character.MagicSkillOpen = value;
                     break;
 
-                case 24:
+                case 26:
                     character.MagicSkillDetect = value;
                     break;
 
-                case 25:
+                case 27:
                     character.MagicSkillTrigger = value;
                     break;
 
-                case 26:
+                case 28:
                     character.MagicSkillDazzle = value;
                     break;
 
-                case 27:
+                case 29:
                     character.MagicSkillZap = value;
                     break;
 
-                case 28:
+                case 30:
                     character.MagicSkillCalm = value;
                     break;
 
-                case 29:
+                case 31:
                     character.MagicSkillFlame = value;
                     break;
 
-                case 30:
+                case 32:
                     character.MagicSkillFetch = value;
+                    break;
+
+                case 33:
+                    character.MagicSkillForceBolt = value;
+                    break;
+
+                case 34:
+                    character.MagicSkillLevitate = value;
+                    break;
+
+                case 35:
+                    character.MagicSkillReversal = value;
+                    break;
+
+                case 20:
+                    character.Honor = value;
+                    break;
+
+                case 19:
+                    character.Communication = value;
                     break;
 
                 case 18:
@@ -133,72 +200,9 @@ namespace QfgCharacterLibrary.GameInfo
         }
 
 
-        public int MaxMagicStatValue
-        {
-            get { return 100; }
-        }
-
-        public int MaxDaggers
-        {
-            get { return 10; }
-        }
-
-        public int MaxHealingPotions
-        {
-            get { return 8; }
-        }
-
-        public int MaxVigorPotions
-        {
-            get { return 7; }
-        }
-
-        public int MaxMagicPotions
-        {
-            get { return 6; }
-        }
-
-        public bool HasForceBoltMagic
-        {
-            get { return false; }
-        }
-
-        public bool HasLevitate
-        {
-            get { return false; }
-        }
-
-        public bool HasReversal
-        {
-            get { return false; }
-        }
-
-        public bool HasPaladin
-        {
-            get { return false; }
-        }
-
-        public bool HasCommunication
-        {
-            get { return false; }
-        }
-
-        public bool HasHonor
-        {
-            get { return false; }
-        }
-
-        public bool HasAcrobatics
-        {
-            get { return false; }
-        }
-
-        #endregion
-
-
         public string EncodedCharacterString(QfgCharacter character)
         {
-            string str = string.Format("83-{25}-2-72-71-115-{0}-{1}-{2}-{3}-{4}-{5}-{6}-{7}-{8}-{9}-{10}-{11}-{12}-28-4-57-75-{13}-{14}-{15}-{16}-{17}-{18}-{19}-{20}-{21}-{22}-{23}-{24}-0-121-6-9991-9992-67-8-45-112-",
+            string str = string.Format("83-{27}-25-25-200-1-{0}-{1}-{2}-{3}-{4}-{5}-{6}-{7}-{8}-{9}-{10}-{11}-{12}-{13}-{14}-25-25-25-25-{15}-{16}-{17}-{18}-{19}-{20}-{21}-{22}-{23}-{24}-{25}-{26}-5-5-5-5-160-62-9991-9992-47-144-25-163-",
                 character.Strength.ToString(),
                 character.Intelligence.ToString(),
                 character.Agility.ToString(),
@@ -212,6 +216,8 @@ namespace QfgCharacterLibrary.GameInfo
                 character.Throwing.ToString(),
                 character.Climbing.ToString(),
                 character.Magic.ToString(),
+                character.Communication.ToString(),
+                character.Honor.ToString(),
                 character.MagicSkillOpen.ToString(),
                 character.MagicSkillDetect.ToString(),
                 character.MagicSkillTrigger.ToString(),
@@ -220,13 +226,12 @@ namespace QfgCharacterLibrary.GameInfo
                 character.MagicSkillCalm.ToString(),
                 character.MagicSkillFlame.ToString(),
                 character.MagicSkillFetch.ToString(),
+                character.MagicSkillForceBolt.ToString(),
+                character.MagicSkillLevitate.ToString(),
+                character.MagicSkillReversal.ToString(),
                 character.InventoryDaggers.ToString(),
-                character.InventoryHealingPotions.ToString(),
-                character.InventoryMagicPotions.ToString(),
-                character.InventoryVigorPotions.ToString(),
                 ((int)character.QfgClass).ToString()
                 );
-
 
             string[] ar = str.Split('-');
             List<int> decodedStrArray = new List<int>();
@@ -237,27 +242,35 @@ namespace QfgCharacterLibrary.GameInfo
                     decodedStrArray.Add(Int32.Parse(st));
             }
 
-            int total1 = 0xce;
+            int total1 = 0xda;
             int total2 = 0;
 
-            for (int i = 0; i < 35; i += 2)
+            for (int i = 0; i < 40; i += 2)
             {
+                decodedStrArray[i + 1] = decodedStrArray[i + 1] & 255;
                 total1 += decodedStrArray[i + 1];
             }
 
-            for (int i = 1; i < 35; i += 2)
+            for (int i = 1; i < 40; i += 2)
             {
+                decodedStrArray[i + 1] = decodedStrArray[i + 1] & 255;
                 total2 += decodedStrArray[i + 1];
             }
 
-            total1 &= 127;
-            total2 &= 127;
+            total1 &= 255;
+            total2 &= 255;
 
             character.CheckSum1 = total1;
             character.CheckSum2 = total2;
 
             str = str.Replace("-9992-", "-" + total2.ToString() + "-");
             str = str.Replace("-9991-", "-" + total1.ToString() + "-");
+
+            for (int i = 0; i < 48; i++)
+            {
+                decodedStrArray[i + 1] = decodedStrArray[i + 1] & 255;
+                decodedStrArray[i + 1] ^= decodedStrArray[i];
+            }
 
             ar = null;
             ar = str.Split('-');
@@ -268,15 +281,14 @@ namespace QfgCharacterLibrary.GameInfo
                     decodedStrArray.Add(Int32.Parse(st));
             }
 
-
-            int prev = 0;// x53;
+            int prev = 0;
             int index = 0;
             List<int> encodedVal = new List<int>();
 
             foreach (int val in decodedStrArray)
             {
                 int encoded = val;
-                encoded ^= prev & 127;
+                encoded ^= prev & 255;
 
                 if (index > 0)
                     encodedVal.Add(encoded);
@@ -304,7 +316,7 @@ namespace QfgCharacterLibrary.GameInfo
         public void LoadCharacterString(string characterString, QfgCharacter character)
         {
             character.QfgClass = QfgClasses.Fighter;
-            character.QfgGame = QfgGames.Qfg1;
+            character.QfgGame = QfgGames.Qfg2;
 
             string hexString = characterString;
             List<int> hexArray = new List<int>();
@@ -321,7 +333,7 @@ namespace QfgCharacterLibrary.GameInfo
 
             int prev = 0;// x53;
             int index = 0;
-            int total1 = 0xce;
+            int total1 = 0xda;
             int total2 = 0;
 
             List<int> decodedValues = new List<int>();
@@ -329,7 +341,7 @@ namespace QfgCharacterLibrary.GameInfo
             foreach (int val in hexArray)
             {
                 int decoded = val;
-                decoded ^= prev & 127;
+                decoded ^= prev & 255;
 
                 decodedStr += decoded.ToString() + "-";
                 decodedValues.Add(decoded);
@@ -342,20 +354,20 @@ namespace QfgCharacterLibrary.GameInfo
 
             string total1Str = "";
 
-            for (int i = 0; i < 35; i += 2)
+            for (int i = 0; i < 40; i += 2)
             {
                 total1 += decodedValues[i + 1];
 
                 total1Str += decodedValues[i + 1].ToString() + "-";
             }
 
-            for (int i = 1; i < 35; i += 2)
+            for (int i = 1; i < 40; i += 2)
             {
                 total2 += decodedValues[i + 1];
             }
 
-            total1 &= 127;
-            total2 &= 127;
+            total1 &= 255;
+            total2 &= 255;
 
             if (character.CheckSum1 != total1 || character.CheckSum2 != total2)
             {

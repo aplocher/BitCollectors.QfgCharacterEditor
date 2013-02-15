@@ -21,3 +21,13 @@ C:\SourceCode\GitRepositories\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Deb
 C:\SourceCode\GitRepositories\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.MainForm.resources
 C:\SourceCode\GitRepositories\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.Properties.Resources.resources
 C:\SourceCode\GitRepositories\QFG-Character-Editor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.csproj.GenerateResource.Cache
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.exe
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.pdb
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWinUI\bin\Debug\QFGCharacterWinUI.exe
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWinUI\bin\Debug\QFGCharacterWinUI.pdb
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWinUI\bin\Debug\QfgCharacterLibrary.dll
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWinUI\bin\Debug\QfgCharacterLibrary.pdb
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.csprojResolveAssemblyReference.cache
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.MainForm.resources
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.Properties.Resources.resources
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWinUI\obj\x86\Debug\QFGCharacterWinUI.csproj.GenerateResource.Cache

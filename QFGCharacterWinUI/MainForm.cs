@@ -202,8 +202,12 @@ namespace QFGCharacterWinUI
         private void cboQfgGames_SelectedIndexChanged(object sender, EventArgs e)
         {
             _character.QfgGame = (QfgGames)cboQfgGames.SelectedItem;
+
             RefreshCharacterClass();
             RefreshCharacterImage();
+
+            qfgCharacterBindingSource.DataSource = _character;
+            qfgCharacterBindingSource.ResetBindings(false);
         }
 
         private void cboCharacterClasses_SelectedIndexChanged(object sender, EventArgs e)
@@ -267,6 +271,28 @@ namespace QFGCharacterWinUI
                                 break;
                         }
 
+                        break;
+
+                    case QfgGames.Qfg2:
+                        switch ((QfgClasses)cboCharacterClasses.SelectedItem)
+                        {
+                            case QfgClasses.Fighter:
+                            case QfgClasses.Paladin:
+                                pbCharacterImage.Image = Resources.QFG2_Fighter;
+                                break;
+
+                            case QfgClasses.Magic:
+                                pbCharacterImage.Image = Resources.QFG2_Mage;
+                                break;
+
+                            case QfgClasses.Thief:
+                                pbCharacterImage.Image = Resources.QFG2_Thief;
+                                break;
+
+                            default:
+                                pbCharacterImage.Image = null;
+                                break;
+                        }
                         break;
 
                     default:

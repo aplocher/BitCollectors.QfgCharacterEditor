@@ -42,6 +42,7 @@ namespace QfgCharacterLibrary
         private int _climbing;
         private int _magic;
         private int _communication;
+        private int _honor;
         private int _acrobatics;
 
         private int _inventoryDaggers;
@@ -319,6 +320,21 @@ namespace QfgCharacterLibrary
             }
         }
 
+        public int Honor
+        {
+            get
+            {
+                return _honor;
+            }
+            set
+            {
+                if (_honor != value)
+                    IsDirty = true;
+
+                _honor = value;
+            }
+        }
+
         public int Acrobatics
         {
             get
@@ -526,6 +542,14 @@ namespace QfgCharacterLibrary
             }
         }
 
+        public bool HonorEnabled
+        {
+            get
+            {
+                return this.QfgGameInfo.HasHonor;
+            }
+        }
+
         public bool AcrobaticsEnabled
         {
             get
@@ -570,114 +594,7 @@ namespace QfgCharacterLibrary
 
         public string Encode()
         {
-            string str = string.Format("83-{25}-2-72-71-115-{0}-{1}-{2}-{3}-{4}-{5}-{6}-{7}-{8}-{9}-{10}-{11}-{12}-28-4-57-75-{13}-{14}-{15}-{16}-{17}-{18}-{19}-{20}-{21}-{22}-{23}-{24}-0-121-6-9991-9992-67-8-45-112-",
-                this.Strength.ToString(),
-                this.Intelligence.ToString(),
-                this.Agility.ToString(),
-                this.Vitality.ToString(),
-                this.Luck.ToString(),
-                this.WeaponUse.ToString(),
-                this.Parry.ToString(),
-                this.Dodge.ToString(),
-                this.Stealth.ToString(),
-                this.PickLocks.ToString(),
-                this.Throwing.ToString(),
-                this.Climbing.ToString(),
-                this.Magic.ToString(),
-                this.MagicSkillOpen.ToString(),
-                this.MagicSkillDetect.ToString(),
-                this.MagicSkillTrigger.ToString(),
-                this.MagicSkillDazzle.ToString(),
-                this.MagicSkillZap.ToString(),
-                this.MagicSkillCalm.ToString(),
-                this.MagicSkillFlame.ToString(),
-                this.MagicSkillFetch.ToString(),
-                this.InventoryDaggers.ToString(),
-                this.InventoryHealingPotions.ToString(),
-                this.InventoryMagicPotions.ToString(),
-                this.InventoryVigorPotions.ToString(),
-                ((int)this.QfgClass).ToString()
-                );
-
-
-            OnLogData("----------------SAVING------------------");
-
-            string[] ar = str.Split('-');
-            List<int> decodedStrArray = new List<int>();
-
-            foreach (string st in ar)
-            {
-                if (st != "")
-                    decodedStrArray.Add(Int32.Parse(st));
-            }
-
-            int total1 = 0xce;
-            int total2 = 0;
-
-            for (int i = 0; i < 35; i += 2)
-            {
-                total1 += decodedStrArray[i + 1];
-            }
-
-            for (int i = 1; i < 35; i += 2)
-            {
-                total2 += decodedStrArray[i + 1];
-            }
-
-            total1 &= 127;
-            total2 &= 127;
-
-            OnLogData(total1.ToString() + " - " + total2.ToString());
-
-
-            this.CheckSum1 = total1;
-            this.CheckSum2 = total2;
-
-            str = str.Replace("-9992-", "-" + total2.ToString() + "-");
-            str = str.Replace("-9991-", "-" + total1.ToString() + "-");
-
-            OnLogData(str);
-
-            ar = null;
-            ar = str.Split('-');
-            decodedStrArray.Clear();
-            foreach (string st in ar)
-            {
-                if (st != "")
-                    decodedStrArray.Add(Int32.Parse(st));
-            }
-
-
-            int prev = 0;// x53;
-            int index = 0;
-            List<int> encodedVal = new List<int>();
-
-            foreach (int val in decodedStrArray)
-            {
-                int encoded = val;
-                encoded ^= prev & 127;
-
-                if (index > 0)
-                    encodedVal.Add(encoded);
-
-                prev = encoded;
-                index++;
-            }
-
-            List<string> encodedStrArray = new List<string>();
-            foreach (int val in encodedVal)
-            {
-                encodedStrArray.Add(val.ToString("X"));
-            }
-
-            string encodedValue = "";
-
-            for (int i = 0; i < encodedStrArray.Count; i++)
-            {
-                encodedValue += encodedStrArray[i].PadLeft(2, ' ').ToLower();
-            }
-
-            this.OnLogData(encodedValue);
+            string encodedValue = this.QfgGameInfo.EncodedCharacterString(this);
 
             this.IsDirty = false;
 
@@ -738,74 +655,13 @@ namespace QfgCharacterLibrary
 
         public void LoadCharacter(string name, string dataString)
         {
-
-            OnLogData("----------------LOADING------------------");
-            this.OnLogData(dataString);
+            if (dataString.Length == 86)
+                this.QfgGame = QfgGames.Qfg1;
+            else if (dataString.Length == 96)
+                this.QfgGame = QfgGames.Qfg2;
 
             this.CharacterName = name;
-            this.QfgClass = QfgClasses.Fighter;
-            this.QfgGame = QfgGames.Qfg1;
-
-            string hexString = dataString;
-            List<int> hexArray = new List<int>();
-
-            while (hexString.Length > 0)
-            {
-                string hexValue = hexString.Substring(hexString.Length - 2, 2);
-                hexString = hexString.Substring(0, hexString.Length - 2);
-                hexArray.Add(Convert.ToInt32(hexValue.Trim(), 16));
-            }
-
-            hexArray.Add(0x53);
-            hexArray.Reverse();
-
-            int prev = 0;// x53;
-            int index = 0;
-            int total1 = 0xce;
-            int total2 = 0;
-
-            List<int> decodedValues = new List<int>();
-            string decodedStr = "";
-            foreach (int val in hexArray)
-            {
-                int decoded = val;
-                decoded ^= prev & 127;
-
-                decodedStr += decoded.ToString() + "-";
-                decodedValues.Add(decoded);
-
-                this.QfgGameInfo.LoadMappings(index, decoded, this);
-
-                prev = val;
-                index++;
-            }
-
-            OnLogData(decodedStr);
-
-            string total1Str = "";
-
-            for (int i = 0; i < 35; i += 2)
-            {
-                total1 += decodedValues[i + 1];
-
-                total1Str += decodedValues[i + 1].ToString() + "-";
-            }
-
-            for (int i = 1; i < 35; i += 2)
-            {
-                total2 += decodedValues[i + 1];
-            }
-
-            total1 &= 127;
-            total2 &= 127;
-
-            OnLogData(total1.ToString() + " - " + total2.ToString());
-
-            if (this.CheckSum1 != total1 || this.CheckSum2 != total2)
-            {
-                //throw new Exception("Invalid Character Checksums");
-            }
-
+            this.QfgGameInfo.LoadCharacterString(dataString, this);
             this.IsDirty = false;
         }
 
@@ -821,15 +677,7 @@ namespace QfgCharacterLibrary
                     break;
 
                 case QfgGames.Qfg2:
-                    // TODO: Implement QFG2 Settings
-                    break;
-
-                case QfgGames.Qfg3:
-                    // TODO: Implement QFG3 Settings
-                    break;
-
-                case QfgGames.Qfg4:
-                    // TODO: Implement QFG4 Settings
+                    this.QfgGameInfo = new Qfg2GameInfo();
                     break;
             }
         }

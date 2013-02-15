@@ -19,3 +19,10 @@ C:\SourceCode\GitRepositories\QFG-Character-Editor\QFGCharacterWebUI\bin\QFGChar
 C:\SourceCode\GitRepositories\QFG-Character-Editor\QFGCharacterWebUI\bin\QFGCharacterWebUI.pdb
 C:\SourceCode\GitRepositories\QFG-Character-Editor\QFGCharacterWebUI\bin\QfgCharacterLibrary.dll
 C:\SourceCode\GitRepositories\QFG-Character-Editor\QFGCharacterWebUI\bin\QfgCharacterLibrary.pdb
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\bin\QFGCharacterWebUI.dll
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\bin\QFGCharacterWebUI.pdb
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\bin\QfgCharacterLibrary.dll
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\bin\QfgCharacterLibrary.pdb
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.csprojResolveAssemblyReference.cache
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.dll
+C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.pdb

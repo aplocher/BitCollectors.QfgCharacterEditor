@@ -17,6 +17,8 @@ namespace QfgCharacterLibrary.Interfaces
 
         bool HasCommunication { get; }
 
+        bool HasHonor { get; }
+
         bool HasAcrobatics { get; }
 
         bool HasForceBoltMagic { get; }
@@ -28,5 +30,9 @@ namespace QfgCharacterLibrary.Interfaces
         bool HasPaladin { get; }
 
         void LoadMappings(int index, int value, QfgCharacter character);
+
+        string EncodedCharacterString(QfgCharacter character);
+
+        void LoadCharacterString(string characterString, QfgCharacter character);
     }
 }
