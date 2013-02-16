@@ -3,8 +3,8 @@ namespace QfgCharacterLibrary.Enums
 {
     public enum QfgGames
     {
-        Qfg1 = 1,
-        Qfg2 = 2
+        QFG1 = 1,
+        QFG2 = 2
         //Qfg3 = 3,
         //Qfg4 = 4
     }

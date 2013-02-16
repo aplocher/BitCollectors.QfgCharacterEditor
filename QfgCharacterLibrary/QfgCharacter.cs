@@ -25,7 +25,7 @@ namespace QfgCharacterLibrary
                 LogData(this, logData);
         }
 
-        private QfgGames _qfgGame = QfgGames.Qfg1;
+        private QfgGames _qfgGame = QfgGames.QFG1;
         private QfgClasses _qfgClass = QfgClasses.Fighter;
         private string _characterName = "";
         private int _strength;
@@ -617,6 +617,15 @@ namespace QfgCharacterLibrary
             this.Throwing = this.QfgGameInfo.MaxCharacterStatValue;
             this.Magic = this.QfgGameInfo.MaxCharacterStatValue;
 
+            if (this.AcrobaticsEnabled)
+                this.Acrobatics = this.QfgGameInfo.MaxCharacterStatValue;
+
+            if (this.CommunicationEnabled)
+                this.Communication = this.QfgGameInfo.MaxCharacterStatValue;
+
+            if (this.HonorEnabled)
+                this.Honor = this.QfgGameInfo.MaxCharacterStatValue;
+
             this.MagicSkillCalm = this.QfgGameInfo.MaxMagicStatValue;
             this.MagicSkillDazzle = this.QfgGameInfo.MaxMagicStatValue;
             this.MagicSkillDetect = this.QfgGameInfo.MaxMagicStatValue;
@@ -656,9 +665,9 @@ namespace QfgCharacterLibrary
         public void LoadCharacter(string name, string dataString)
         {
             if (dataString.Length == 86)
-                this.QfgGame = QfgGames.Qfg1;
+                this.QfgGame = QfgGames.QFG1;
             else if (dataString.Length == 96)
-                this.QfgGame = QfgGames.Qfg2;
+                this.QfgGame = QfgGames.QFG2;
 
             this.CharacterName = name;
             this.QfgGameInfo.LoadCharacterString(dataString, this);
@@ -672,11 +681,11 @@ namespace QfgCharacterLibrary
         {
             switch (this.QfgGame)
             {
-                case QfgGames.Qfg1:
+                case QfgGames.QFG1:
                     this.QfgGameInfo = new Qfg1GameInfo();
                     break;
 
-                case QfgGames.Qfg2:
+                case QfgGames.QFG2:
                     this.QfgGameInfo = new Qfg2GameInfo();
                     break;
             }

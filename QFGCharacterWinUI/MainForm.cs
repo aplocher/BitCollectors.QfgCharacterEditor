@@ -28,7 +28,7 @@ namespace QFGCharacterWinUI
         private void Form1_Load(object sender, EventArgs e)
         {
             cboQfgGames.DataSource = Enum.GetValues(typeof(QfgCharacterLibrary.Enums.QfgGames));
-            //cboCharacterClasses.DataSource = Enum.GetValues(typeof(QfgCharacterLibrary.Enums.QfgClasses));
+
             RefreshCharacterClass();
 
             qfgCharacterBindingSource.DataSource = _character;
@@ -130,7 +130,7 @@ namespace QFGCharacterWinUI
 
             _character.SetMaxValues();
 
-            qfgCharacterBindingSource.ResetBindings(false);// (true);
+            qfgCharacterBindingSource.ResetBindings(false);
 
             this.ValidateChildren();
         }
@@ -175,7 +175,7 @@ namespace QFGCharacterWinUI
 
             SetFilename(filename);
 
-            MessageBox.Show("Character exported to file from QFG1", "File Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Character exported to file from " + _character.QfgGame.ToString(), "File Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void SetFilename(string filename)
@@ -218,7 +218,6 @@ namespace QFGCharacterWinUI
         private void RefreshCharacterClass()
         {
             Array classes = Enum.GetValues(typeof(QfgCharacterLibrary.Enums.QfgClasses));
-            //QfgGames selectedGame = (QfgGames)cboQfgGames.SelectedItem;
 
             if (_character.QfgGameInfo.HasPaladin)
             {
@@ -232,7 +231,6 @@ namespace QFGCharacterWinUI
                     if (Enum.GetName(typeof(QfgClasses), item) != "Paladin")
                     {
                         newList.Add(item);
-                        //newClasses.
                     }
                 }
 
@@ -250,7 +248,7 @@ namespace QFGCharacterWinUI
             {
                 switch ((QfgGames)cboQfgGames.SelectedItem)
                 {
-                    case QfgGames.Qfg1:
+                    case QfgGames.QFG1:
 
                         switch ((QfgClasses)cboCharacterClasses.SelectedItem)
                         {
@@ -273,7 +271,7 @@ namespace QFGCharacterWinUI
 
                         break;
 
-                    case QfgGames.Qfg2:
+                    case QfgGames.QFG2:
                         switch ((QfgClasses)cboCharacterClasses.SelectedItem)
                         {
                             case QfgClasses.Fighter:

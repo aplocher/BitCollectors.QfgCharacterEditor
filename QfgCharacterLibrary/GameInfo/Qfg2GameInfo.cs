@@ -316,7 +316,7 @@ namespace QfgCharacterLibrary.GameInfo
         public void LoadCharacterString(string characterString, QfgCharacter character)
         {
             character.QfgClass = QfgClasses.Fighter;
-            character.QfgGame = QfgGames.Qfg2;
+            character.QfgGame = QfgGames.QFG2;
 
             string hexString = characterString;
             List<int> hexArray = new List<int>();

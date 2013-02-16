@@ -140,22 +140,22 @@ namespace QfgCharacterLibrary.GameInfo
 
         public int MaxDaggers
         {
-            get { return 10; }
+            get { return 5; }
         }
 
         public int MaxHealingPotions
         {
-            get { return 8; }
+            get { return 10; }
         }
 
         public int MaxVigorPotions
         {
-            get { return 7; }
+            get { return 10; }
         }
 
         public int MaxMagicPotions
         {
-            get { return 6; }
+            get { return 10; }
         }
 
         public bool HasForceBoltMagic
@@ -304,7 +304,7 @@ namespace QfgCharacterLibrary.GameInfo
         public void LoadCharacterString(string characterString, QfgCharacter character)
         {
             character.QfgClass = QfgClasses.Fighter;
-            character.QfgGame = QfgGames.Qfg1;
+            character.QfgGame = QfgGames.QFG1;
 
             string hexString = characterString;
             List<int> hexArray = new List<int>();
