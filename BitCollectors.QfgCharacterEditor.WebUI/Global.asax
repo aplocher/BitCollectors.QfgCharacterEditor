@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="QFGCharacterWebUI.MvcApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="BitCollectors.QfgCharacterEditor.WebUI.MvcApplication" Language="C#" %>

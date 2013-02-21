@@ -56,6 +56,12 @@
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BitCollectors.QfgCharacterEditor.Library\BitCollectors.QfgCharacterEditor.Library.csproj">
+      <Project>{93036471-f036-44f5-b281-6933e0ac9f22}</Project>
+      <Name>BitCollectors.QfgCharacterEditor.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
