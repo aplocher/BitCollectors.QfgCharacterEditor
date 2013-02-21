@@ -27,7 +27,7 @@ namespace BitCollectors.QfgCharacterEditor.Tests
             
             string characterString = qfgCharacter.Encode();
 
-            Assert.AreEqual<string>(characterString, QFG1_FIGHTER_MAX_VAL);
+            Assert.AreEqual<string>(QFG1_FIGHTER_MAX_VAL, characterString);
         }
 
         [TestMethod]
@@ -41,7 +41,7 @@ namespace BitCollectors.QfgCharacterEditor.Tests
 
             string characterString = qfgCharacter.Encode();
 
-            Assert.AreEqual<string>(characterString, QFG1_MAGIC_MAX_VAL);
+            Assert.AreEqual<string>(QFG1_MAGIC_MAX_VAL, characterString);
         }
 
         [TestMethod]
@@ -55,7 +55,7 @@ namespace BitCollectors.QfgCharacterEditor.Tests
 
             string characterString = qfgCharacter.Encode();
 
-            Assert.AreEqual<string>(characterString, QFG1_THIEF_MAX_VAL);
+            Assert.AreEqual<string>(QFG1_THIEF_MAX_VAL, characterString);
         }
 
         [TestMethod]
@@ -69,7 +69,7 @@ namespace BitCollectors.QfgCharacterEditor.Tests
 
             string characterString = qfgCharacter.Encode();
 
-            Assert.AreEqual<string>(characterString, QFG2_FIGHTER_MAX_VAL);
+            Assert.AreEqual<string>(QFG2_FIGHTER_MAX_VAL, characterString);
         }
 
         [TestMethod]
@@ -83,7 +83,7 @@ namespace BitCollectors.QfgCharacterEditor.Tests
 
             string characterString = qfgCharacter.Encode();
 
-            Assert.AreEqual<string>(characterString, QFG2_MAGIC_MAX_VAL);
+            Assert.AreEqual<string>(QFG2_MAGIC_MAX_VAL, characterString);
         }
 
         [TestMethod]
@@ -97,7 +97,7 @@ namespace BitCollectors.QfgCharacterEditor.Tests
 
             string characterString = qfgCharacter.Encode();
 
-            Assert.AreEqual<string>(characterString, QFG2_THIEF_MAX_VAL);
+            Assert.AreEqual<string>(QFG2_THIEF_MAX_VAL, characterString);
         }
 
         [TestMethod]
@@ -111,7 +111,7 @@ namespace BitCollectors.QfgCharacterEditor.Tests
 
             string characterString = qfgCharacter.Encode();
 
-            Assert.AreEqual<string>(characterString, QFG2_PALADIN_MAX_VAL);
+            Assert.AreEqual<string>(QFG2_PALADIN_MAX_VAL, characterString);
         }
 
 
@@ -177,7 +177,7 @@ namespace BitCollectors.QfgCharacterEditor.Tests
             if (qfgCharacter.Acrobatics != 0)
                 valueValid = false;
 
-            Assert.AreEqual<bool>(valueValid, true);
+            Assert.AreEqual<bool>(true, valueValid);
         }
     }
 }
