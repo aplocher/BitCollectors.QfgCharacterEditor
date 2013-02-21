@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCollectors.QfgCharacterEditor.WinUI", "QFGCharacterWinUI\BitCollectors.QfgCharacterEditor.WinUI.csproj", "{10A415AB-FA6E-4684-B0DC-5511472EA75E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCollectors.QfgCharacterEditor.WinUI", "BitCollectors.QfgCharacterEditor.WinUI\BitCollectors.QfgCharacterEditor.WinUI.csproj", "{10A415AB-FA6E-4684-B0DC-5511472EA75E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCollectors.QfgCharacterEditor.Library", "QfgCharacterLibrary\BitCollectors.QfgCharacterEditor.Library.csproj", "{93036471-F036-44F5-B281-6933E0AC9F22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCollectors.QfgCharacterEditor.Library", "BitCollectors.QfgCharacterEditor.Library\BitCollectors.QfgCharacterEditor.Library.csproj", "{93036471-F036-44F5-B281-6933E0AC9F22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCollectors.QfgCharacterEditor.WebUI", "QFGCharacterWebUI\BitCollectors.QfgCharacterEditor.WebUI.csproj", "{D1212C24-12CC-4600-9631-C1266A0FA0FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCollectors.QfgCharacterEditor.WebUI", "BitCollectors.QfgCharacterEditor.WebUI\BitCollectors.QfgCharacterEditor.WebUI.csproj", "{D1212C24-12CC-4600-9631-C1266A0FA0FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCollectors.QfgCharacterEditor.Tests", "BitCollectors.QfgCharacterEditor.Tests\BitCollectors.QfgCharacterEditor.Tests.csproj", "{DC7D8C2B-59FE-43E4-9ACC-40C2C86F1817}"
 EndProject
