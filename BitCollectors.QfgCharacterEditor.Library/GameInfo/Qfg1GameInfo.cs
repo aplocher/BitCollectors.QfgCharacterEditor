@@ -140,7 +140,7 @@ namespace BitCollectors.QfgCharacterEditor.Library.GameInfo
 
         public int MaxDaggers
         {
-            get { return 5; }
+            get { return 10; }
         }
 
         public int MaxHealingPotions

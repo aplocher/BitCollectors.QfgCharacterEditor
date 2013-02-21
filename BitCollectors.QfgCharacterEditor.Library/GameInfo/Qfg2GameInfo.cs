@@ -26,17 +26,17 @@ namespace BitCollectors.QfgCharacterEditor.Library.GameInfo
 
         public int MaxHealingPotions
         {
-            get { return 5; }
+            get { return 10; }
         }
 
         public int MaxVigorPotions
         {
-            get { return 5; }
+            get { return 10; }
         }
 
         public int MaxMagicPotions
         {
-            get { return 5; }
+            get { return 10; }
         }
 
         public bool HasCommunication
@@ -404,7 +404,7 @@ namespace BitCollectors.QfgCharacterEditor.Library.GameInfo
 
         public int MaxPoisonCurePotions
         {
-            get { return 5; }
+            get { return 10; }
         }
     }
 }
