@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
-using QfgCharacterLibrary.Enums;
-using QfgCharacterLibrary.GameInfo;
-using QfgCharacterLibrary.Interfaces;
+using BitCollectors.QfgCharacterEditor.Library.Enums;
+using BitCollectors.QfgCharacterEditor.Library.Interfaces;
+using BitCollectors.QfgCharacterEditor.Library.GameInfo;
 
-namespace QfgCharacterLibrary
+namespace BitCollectors.QfgCharacterEditor.Library
 {
     public class QfgCharacter
     {
@@ -49,6 +49,7 @@ namespace QfgCharacterLibrary
         private int _inventoryHealingPotions;
         private int _inventoryMagicPotions;
         private int _inventoryVigorPotions;
+        private int _inventoryPoisonCurePotions;
 
         private int _magicSkillOpen;
         private int _magicSkillDetect;
@@ -110,18 +111,31 @@ namespace QfgCharacterLibrary
             }
         }
 
+        private int GetStatProperty(ref int field, int max)
+        {
+            if (field > max)
+                field = max;
+
+            return field;
+        }
+
+        private void SetStatProperty(ref int field, int value)
+        {
+            if (field != value)
+                IsDirty = true;
+
+            field = value;
+        }
+
         public int Strength
         {
             get
             {
-                return _strength;
+                return GetStatProperty(ref _strength, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_strength != value)
-                    IsDirty = true;
-
-                _strength = value;
+                SetStatProperty(ref _strength, value);
             }
         }
 
@@ -129,14 +143,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _intelligence;
+                return GetStatProperty(ref _intelligence, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_intelligence != value)
-                    IsDirty = true;
-
-                _intelligence = value;
+                SetStatProperty(ref _intelligence, value);
             }
         }
 
@@ -144,14 +155,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _agility;
+                return GetStatProperty(ref _agility, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_agility != value)
-                    IsDirty = true;
-
-                _agility = value;
+                SetStatProperty(ref _agility, value);
             }
         }
 
@@ -159,14 +167,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _vitality;
+                return GetStatProperty(ref _vitality, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_vitality != value)
-                    IsDirty = true;
-
-                _vitality = value;
+                SetStatProperty(ref _vitality, value);
             }
         }
 
@@ -174,14 +179,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _luck;
+                return GetStatProperty(ref _luck, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_luck != value)
-                    IsDirty = true;
-
-                _luck = value;
+                SetStatProperty(ref _luck, value);
             }
         }
 
@@ -189,14 +191,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _weaponUse;
+                return GetStatProperty(ref _weaponUse, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_weaponUse != value)
-                    IsDirty = true;
-
-                _weaponUse = value;
+                SetStatProperty(ref _weaponUse, value);
             }
         }
 
@@ -204,14 +203,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _parry;
+                return GetStatProperty(ref _parry, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_parry != value)
-                    IsDirty = true;
-
-                _parry = value;
+                SetStatProperty(ref _parry, value);
             }
         }
 
@@ -219,14 +215,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _dodge;
+                return GetStatProperty(ref _dodge, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_dodge != value)
-                    IsDirty = true;
-
-                _dodge = value;
+                SetStatProperty(ref _dodge, value);
             }
         }
 
@@ -234,14 +227,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _stealth;
+                return GetStatProperty(ref _stealth, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_stealth != value)
-                    IsDirty = true;
-
-                _stealth = value;
+                SetStatProperty(ref _stealth, value);
             }
         }
 
@@ -249,14 +239,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _pickLocks;
+                return GetStatProperty(ref _pickLocks, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_pickLocks != value)
-                    IsDirty = true;
-
-                _pickLocks = value;
+                SetStatProperty(ref _pickLocks, value);
             }
         }
 
@@ -264,14 +251,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _throwing;
+                return GetStatProperty(ref _throwing, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_throwing != value)
-                    IsDirty = true;
-
-                _throwing = value;
+                SetStatProperty(ref _throwing, value);
             }
         }
 
@@ -279,14 +263,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _climbing;
+                return GetStatProperty(ref _climbing, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_climbing != value)
-                    IsDirty = true;
-
-                _climbing = value;
+                SetStatProperty(ref _climbing, value);
             }
         }
 
@@ -294,14 +275,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _magic;
+                return GetStatProperty(ref _magic, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_magic != value)
-                    IsDirty = true;
-
-                _magic = value;
+                SetStatProperty(ref _magic, value);
             }
         }
 
@@ -309,14 +287,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _communication;
+                return GetStatProperty(ref _communication, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_communication != value)
-                    IsDirty = true;
-
-                _communication = value;
+                SetStatProperty(ref _communication, value);
             }
         }
 
@@ -324,14 +299,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _honor;
+                return GetStatProperty(ref _honor, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_honor != value)
-                    IsDirty = true;
-
-                _honor = value;
+                SetStatProperty(ref _honor, value);
             }
         }
 
@@ -339,14 +311,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _acrobatics;
+                return GetStatProperty(ref _acrobatics, this.QfgGameInfo.MaxCharacterStatValue);
             }
             set
             {
-                if (_acrobatics != value)
-                    IsDirty = true;
-
-                _acrobatics = value;
+                SetStatProperty(ref _acrobatics, value);
             }
         }
 
@@ -354,14 +323,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _inventoryDaggers;
+                return GetStatProperty(ref _inventoryDaggers, this.QfgGameInfo.MaxDaggers);
             }
             set
             {
-                if (_inventoryDaggers != value)
-                    IsDirty = true;
-
-                _inventoryDaggers = value;
+                SetStatProperty(ref _inventoryDaggers, value);
             }
         }
 
@@ -369,14 +335,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _inventoryHealingPotions;
+                return GetStatProperty(ref _inventoryHealingPotions, this.QfgGameInfo.MaxHealingPotions);
             }
             set
             {
-                if (_inventoryHealingPotions != value)
-                    IsDirty = true;
-
-                _inventoryHealingPotions = value;
+                SetStatProperty(ref _inventoryHealingPotions, value);
             }
         }
 
@@ -384,14 +347,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _inventoryMagicPotions;
+                return GetStatProperty(ref _inventoryMagicPotions, this.QfgGameInfo.MaxMagicPotions);
             }
             set
             {
-                if (_inventoryMagicPotions != value)
-                    IsDirty = true;
-
-                _inventoryMagicPotions = value;
+                SetStatProperty(ref _inventoryMagicPotions, value);
             }
         }
 
@@ -399,14 +359,23 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _inventoryVigorPotions;
+                return GetStatProperty(ref _inventoryVigorPotions, this.QfgGameInfo.MaxVigorPotions);
             }
             set
             {
-                if (_inventoryVigorPotions != value)
-                    IsDirty = true;
+                SetStatProperty(ref _inventoryVigorPotions, value);
+            }
+        }
 
-                _inventoryVigorPotions = value;
+        public int InventoryPoisonCurePotions
+        {
+            get
+            {
+                return GetStatProperty(ref _inventoryPoisonCurePotions, this.QfgGameInfo.MaxPoisonCurePotions);
+            }
+            set
+            {
+                SetStatProperty(ref _inventoryPoisonCurePotions, value);
             }
         }
 
@@ -414,14 +383,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _magicSkillOpen;
+                return GetStatProperty(ref _magicSkillOpen, this.QfgGameInfo.MaxMagicStatValue);
             }
             set
             {
-                if (_magicSkillOpen != value)
-                    IsDirty = true;
-
-                _magicSkillOpen = value;
+                SetStatProperty(ref _magicSkillOpen, value);
             }
         }
 
@@ -429,14 +395,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _magicSkillDetect;
+                return GetStatProperty(ref _magicSkillDetect, this.QfgGameInfo.MaxMagicStatValue);
             }
             set
             {
-                if (_magicSkillDetect != value)
-                    IsDirty = true;
-
-                _magicSkillDetect = value;
+                SetStatProperty(ref _magicSkillDetect, value);
             }
         }
 
@@ -444,14 +407,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _magicSkillTrigger;
+                return GetStatProperty(ref _magicSkillTrigger, this.QfgGameInfo.MaxMagicStatValue);
             }
             set
             {
-                if (_magicSkillTrigger != value)
-                    IsDirty = true;
-
-                _magicSkillTrigger = value;
+                SetStatProperty(ref _magicSkillTrigger, value);
             }
         }
 
@@ -459,14 +419,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _magicSkillDazzle;
+                return GetStatProperty(ref _magicSkillDazzle, this.QfgGameInfo.MaxMagicStatValue);
             }
             set
             {
-                if (_magicSkillDazzle != value)
-                    IsDirty = true;
-
-                _magicSkillDazzle = value;
+                SetStatProperty(ref _magicSkillDazzle, value);
             }
         }
 
@@ -474,14 +431,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _magicSkillZap;
+                return GetStatProperty(ref _magicSkillZap, this.QfgGameInfo.MaxMagicStatValue);
             }
             set
             {
-                if (_magicSkillZap != value)
-                    IsDirty = true;
-
-                _magicSkillZap = value;
+                SetStatProperty(ref _magicSkillZap, value);
             }
         }
 
@@ -489,14 +443,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _magicSkillCalm;
+                return GetStatProperty(ref _magicSkillCalm, this.QfgGameInfo.MaxMagicStatValue);
             }
             set
             {
-                if (_magicSkillCalm != value)
-                    IsDirty = true;
-
-                _magicSkillCalm = value;
+                SetStatProperty(ref _magicSkillCalm, value);
             }
         }
 
@@ -504,14 +455,11 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _magicSkillFlame;
+                return GetStatProperty(ref _magicSkillFlame, this.QfgGameInfo.MaxMagicStatValue);
             }
             set
             {
-                if (_magicSkillFlame != value)
-                    IsDirty = true;
-
-                _magicSkillFlame = value;
+                SetStatProperty(ref _magicSkillFlame, value);
             }
         }
 
@@ -519,20 +467,49 @@ namespace QfgCharacterLibrary
         {
             get
             {
-                return _magicSkillFetch;
+                return GetStatProperty(ref _magicSkillFetch, this.QfgGameInfo.MaxMagicStatValue);
             }
             set
             {
-                if (_magicSkillFetch != value)
-                    IsDirty = true;
-
-                _magicSkillFetch = value;
+                SetStatProperty(ref _magicSkillFetch, value);
             }
         }
 
-        public int MagicSkillForceBolt { get; set; }
-        public int MagicSkillLevitate { get; set; }
-        public int MagicSkillReversal { get; set; }
+        public int MagicSkillForceBolt 
+        {
+            get
+            {
+                return GetStatProperty(ref _magicSkillForceBolt, this.QfgGameInfo.MaxMagicStatValue);
+            }
+            set
+            {
+                SetStatProperty(ref _magicSkillForceBolt, value);
+            }
+        }
+
+        public int MagicSkillLevitate 
+        {
+            get
+            {
+                return GetStatProperty(ref _magicSkillLevitate, this.QfgGameInfo.MaxMagicStatValue);
+            }
+            set
+            {
+                SetStatProperty(ref _magicSkillLevitate, value);
+            }
+        }
+
+        public int MagicSkillReversal 
+        {
+            get
+            {
+                return GetStatProperty(ref _magicSkillReversal, this.QfgGameInfo.MaxMagicStatValue);
+            }
+            set
+            {
+                SetStatProperty(ref _magicSkillReversal, value);
+            }
+        }
 
         public bool CommunicationEnabled
         {
@@ -579,6 +556,14 @@ namespace QfgCharacterLibrary
             get
             {
                 return this.QfgGameInfo.HasReversal;
+            }
+        }
+
+        public bool InventoryPoisonCurePotionEnabled
+        {
+            get
+            {
+                return this.QfgGameInfo.HasPoisonCurePotion;
             }
         }
 
@@ -648,6 +633,9 @@ namespace QfgCharacterLibrary
             this.InventoryHealingPotions = this.QfgGameInfo.MaxHealingPotions;
             this.InventoryMagicPotions = this.QfgGameInfo.MaxMagicPotions;
             this.InventoryVigorPotions = this.QfgGameInfo.MaxVigorPotions;
+
+            if (this.InventoryPoisonCurePotionEnabled)
+                this.InventoryPoisonCurePotions = this.QfgGameInfo.MaxPoisonCurePotions;
         }
 
         public void LoadCharacter(string filename)
@@ -677,7 +665,7 @@ namespace QfgCharacterLibrary
         #endregion
 
         #region Private Methods
-        private void LoadGameInfo()
+        public void LoadGameInfo()
         {
             switch (this.QfgGame)
             {
@@ -689,6 +677,27 @@ namespace QfgCharacterLibrary
                     this.QfgGameInfo = new Qfg2GameInfo();
                     break;
             }
+
+            if (!this.AcrobaticsEnabled)
+                this.Acrobatics = 0;
+
+            if (!this.CommunicationEnabled)
+                this.Communication = 0;
+
+            if (!this.HonorEnabled)
+                this.Honor = 0;
+
+            if (!this.InventoryPoisonCurePotionEnabled)
+                this.InventoryPoisonCurePotions = 0;
+
+            if (!this.MagicSkillForceBoltEnabled)
+                this.MagicSkillForceBolt = 0;
+
+            if (!this.MagicSkillLevitateEnabled)
+                this.MagicSkillLevitate = 0;
+
+            if (!this.MagicSkillReversalEnabled)
+                this.MagicSkillReversal = 0;
         }
         #endregion
     }

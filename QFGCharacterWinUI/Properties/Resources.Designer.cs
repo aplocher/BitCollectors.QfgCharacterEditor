@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QFGCharacterWinUI.Properties {
+namespace BitCollectors.QfgCharacterEditor.WinUI.Properties {
     using System;
     
     

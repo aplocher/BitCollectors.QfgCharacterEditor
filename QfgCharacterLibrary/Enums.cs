@@ -1,5 +1,5 @@
 ﻿
-namespace QfgCharacterLibrary.Enums
+namespace BitCollectors.QfgCharacterEditor.Library.Enums
 {
     public enum QfgGames
     {

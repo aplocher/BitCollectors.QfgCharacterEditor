@@ -1,4 +1,4 @@
-﻿namespace QFGCharacterWinUI
+﻿namespace BitCollectors.QfgCharacterEditor.WinUI
 {
     partial class MainForm
     {
@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.textBox26 = new System.Windows.Forms.TextBox();
+            this.qfgCharacterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.textBox29 = new System.Windows.Forms.TextBox();
@@ -62,6 +63,8 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -111,10 +114,10 @@
             this.tbtnMaxValues = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tlblCurrentFile = new System.Windows.Forms.ToolStripStatusLabel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.qfgCharacterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qfgCharacterBindingSource)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -124,11 +127,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qfgCharacterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.textBox33);
+            this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Controls.Add(this.textBox26);
             this.tabPage4.Controls.Add(this.textBox27);
             this.tabPage4.Controls.Add(this.textBox28);
@@ -148,15 +152,19 @@
             // textBox26
             // 
             this.textBox26.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "InventoryMagicPotions", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox26.Location = new System.Drawing.Point(99, 87);
+            this.textBox26.Location = new System.Drawing.Point(123, 89);
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(68, 20);
             this.textBox26.TabIndex = 7;
             // 
+            // qfgCharacterBindingSource
+            // 
+            this.qfgCharacterBindingSource.DataSource = typeof(BitCollectors.QfgCharacterEditor.Library.QfgCharacter);
+            // 
             // textBox27
             // 
             this.textBox27.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "InventoryVigorPotions", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox27.Location = new System.Drawing.Point(99, 61);
+            this.textBox27.Location = new System.Drawing.Point(123, 65);
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(68, 20);
             this.textBox27.TabIndex = 5;
@@ -164,7 +172,7 @@
             // textBox28
             // 
             this.textBox28.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "InventoryHealingPotions", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox28.Location = new System.Drawing.Point(99, 39);
+            this.textBox28.Location = new System.Drawing.Point(123, 41);
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(68, 20);
             this.textBox28.TabIndex = 3;
@@ -172,7 +180,7 @@
             // textBox29
             // 
             this.textBox29.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "InventoryDaggers", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox29.Location = new System.Drawing.Point(99, 17);
+            this.textBox29.Location = new System.Drawing.Point(123, 17);
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(68, 20);
             this.textBox29.TabIndex = 1;
@@ -180,7 +188,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(18, 94);
+            this.label38.Location = new System.Drawing.Point(18, 93);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(74, 13);
             this.label38.TabIndex = 6;
@@ -189,7 +197,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(18, 68);
+            this.label39.Location = new System.Drawing.Point(18, 69);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(69, 13);
             this.label39.TabIndex = 4;
@@ -198,7 +206,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(18, 42);
+            this.label40.Location = new System.Drawing.Point(18, 45);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(81, 13);
             this.label40.TabIndex = 2;
@@ -207,7 +215,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(18, 17);
+            this.label41.Location = new System.Drawing.Point(18, 21);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(47, 13);
             this.label41.TabIndex = 0;
@@ -249,7 +257,7 @@
             // 
             this.textBox32.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "MagicSkillReversalEnabled", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox32.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillReversal", true));
-            this.textBox32.Location = new System.Drawing.Point(95, 264);
+            this.textBox32.Location = new System.Drawing.Point(91, 264);
             this.textBox32.Name = "textBox32";
             this.textBox32.Size = new System.Drawing.Size(68, 20);
             this.textBox32.TabIndex = 21;
@@ -259,7 +267,7 @@
             // 
             this.textBox31.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "MagicSkillLevitateEnabled", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox31.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillLevitate", true));
-            this.textBox31.Location = new System.Drawing.Point(95, 238);
+            this.textBox31.Location = new System.Drawing.Point(91, 239);
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new System.Drawing.Size(68, 20);
             this.textBox31.TabIndex = 19;
@@ -269,7 +277,7 @@
             // 
             this.textBox30.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillForceBolt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox30.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "MagicSkillForceBoltEnabled", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox30.Location = new System.Drawing.Point(95, 212);
+            this.textBox30.Location = new System.Drawing.Point(91, 214);
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(68, 20);
             this.textBox30.TabIndex = 17;
@@ -278,7 +286,7 @@
             // textBox18
             // 
             this.textBox18.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillFetch", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox18.Location = new System.Drawing.Point(95, 186);
+            this.textBox18.Location = new System.Drawing.Point(91, 189);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(68, 20);
             this.textBox18.TabIndex = 15;
@@ -287,7 +295,7 @@
             // textBox19
             // 
             this.textBox19.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillFlame", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox19.Location = new System.Drawing.Point(95, 160);
+            this.textBox19.Location = new System.Drawing.Point(91, 164);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(68, 20);
             this.textBox19.TabIndex = 13;
@@ -296,7 +304,7 @@
             // textBox20
             // 
             this.textBox20.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillCalm", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox20.Location = new System.Drawing.Point(95, 137);
+            this.textBox20.Location = new System.Drawing.Point(91, 139);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(68, 20);
             this.textBox20.TabIndex = 11;
@@ -305,7 +313,7 @@
             // textBox21
             // 
             this.textBox21.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillZap", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox21.Location = new System.Drawing.Point(95, 112);
+            this.textBox21.Location = new System.Drawing.Point(91, 114);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(68, 20);
             this.textBox21.TabIndex = 9;
@@ -314,7 +322,7 @@
             // textBox22
             // 
             this.textBox22.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillDazzle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox22.Location = new System.Drawing.Point(95, 84);
+            this.textBox22.Location = new System.Drawing.Point(91, 89);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(68, 20);
             this.textBox22.TabIndex = 7;
@@ -323,7 +331,7 @@
             // textBox23
             // 
             this.textBox23.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillTrigger", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox23.Location = new System.Drawing.Point(95, 58);
+            this.textBox23.Location = new System.Drawing.Point(91, 64);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(68, 20);
             this.textBox23.TabIndex = 5;
@@ -332,7 +340,7 @@
             // textBox24
             // 
             this.textBox24.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillDetect", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox24.Location = new System.Drawing.Point(95, 36);
+            this.textBox24.Location = new System.Drawing.Point(91, 39);
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(68, 20);
             this.textBox24.TabIndex = 3;
@@ -341,7 +349,7 @@
             // textBox25
             // 
             this.textBox25.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "MagicSkillOpen", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox25.Location = new System.Drawing.Point(95, 14);
+            this.textBox25.Location = new System.Drawing.Point(91, 14);
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(68, 20);
             this.textBox25.TabIndex = 1;
@@ -350,7 +358,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(19, 267);
+            this.label44.Location = new System.Drawing.Point(19, 268);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(49, 13);
             this.label44.TabIndex = 20;
@@ -359,7 +367,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(19, 241);
+            this.label43.Location = new System.Drawing.Point(19, 243);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(45, 13);
             this.label43.TabIndex = 18;
@@ -368,7 +376,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(19, 215);
+            this.label42.Location = new System.Drawing.Point(19, 218);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(55, 13);
             this.label42.TabIndex = 16;
@@ -377,7 +385,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(19, 189);
+            this.label30.Location = new System.Drawing.Point(19, 193);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(34, 13);
             this.label30.TabIndex = 14;
@@ -386,7 +394,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(19, 163);
+            this.label31.Location = new System.Drawing.Point(19, 168);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(35, 13);
             this.label31.TabIndex = 12;
@@ -395,7 +403,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(19, 140);
+            this.label32.Location = new System.Drawing.Point(19, 143);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(30, 13);
             this.label32.TabIndex = 10;
@@ -404,7 +412,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(19, 115);
+            this.label33.Location = new System.Drawing.Point(19, 118);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(26, 13);
             this.label33.TabIndex = 8;
@@ -413,7 +421,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(19, 91);
+            this.label34.Location = new System.Drawing.Point(19, 93);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(39, 13);
             this.label34.TabIndex = 6;
@@ -422,7 +430,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(19, 65);
+            this.label35.Location = new System.Drawing.Point(19, 68);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(40, 13);
             this.label35.TabIndex = 4;
@@ -431,7 +439,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(19, 39);
+            this.label36.Location = new System.Drawing.Point(19, 43);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(39, 13);
             this.label36.TabIndex = 2;
@@ -440,7 +448,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(19, 14);
+            this.label37.Location = new System.Drawing.Point(19, 18);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(33, 13);
             this.label37.TabIndex = 0;
@@ -487,6 +495,24 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Character Stats";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "HonorEnabled", true));
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "Honor", true));
+            this.textBox3.Location = new System.Drawing.Point(88, 160);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(68, 20);
+            this.textBox3.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Honor";
             // 
             // textBox2
             // 
@@ -898,7 +924,7 @@
             // 
             // tbtnLoad
             // 
-            this.tbtnLoad.Image = global::QFGCharacterWinUI.Properties.Resources.folder;
+            this.tbtnLoad.Image = global::BitCollectors.QfgCharacterEditor.WinUI.Properties.Resources.folder;
             this.tbtnLoad.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbtnLoad.Name = "tbtnLoad";
             this.tbtnLoad.Size = new System.Drawing.Size(56, 22);
@@ -907,7 +933,7 @@
             // 
             // tbtnSave
             // 
-            this.tbtnSave.Image = global::QFGCharacterWinUI.Properties.Resources.disk;
+            this.tbtnSave.Image = global::BitCollectors.QfgCharacterEditor.WinUI.Properties.Resources.disk;
             this.tbtnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbtnSave.Name = "tbtnSave";
             this.tbtnSave.Size = new System.Drawing.Size(51, 22);
@@ -921,7 +947,7 @@
             // 
             // tbtnMaxValues
             // 
-            this.tbtnMaxValues.Image = global::QFGCharacterWinUI.Properties.Resources.page_white_get;
+            this.tbtnMaxValues.Image = global::BitCollectors.QfgCharacterEditor.WinUI.Properties.Resources.page_white_get;
             this.tbtnMaxValues.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbtnMaxValues.Name = "tbtnMaxValues";
             this.tbtnMaxValues.Size = new System.Drawing.Size(77, 22);
@@ -943,27 +969,23 @@
             this.tlblCurrentFile.Name = "tlblCurrentFile";
             this.tlblCurrentFile.Size = new System.Drawing.Size(0, 17);
             // 
-            // textBox3
+            // textBox33
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "HonorEnabled", true));
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "Honor", true));
-            this.textBox3.Location = new System.Drawing.Point(88, 160);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(68, 20);
-            this.textBox3.TabIndex = 13;
+            this.textBox33.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "InventoryPoisonCurePotions", true));
+            this.textBox33.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "InventoryPoisonCurePotionEnabled", true));
+            this.textBox33.Location = new System.Drawing.Point(123, 113);
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(68, 20);
+            this.textBox33.TabIndex = 9;
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Honor";
-            // 
-            // qfgCharacterBindingSource
-            // 
-            this.qfgCharacterBindingSource.DataSource = typeof(QfgCharacterLibrary.QfgCharacter);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Poison Cure Potions";
             // 
             // MainForm
             // 
@@ -980,6 +1002,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qfgCharacterBindingSource)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -995,7 +1018,6 @@
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qfgCharacterBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1088,6 +1110,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox33;
+        private System.Windows.Forms.Label label4;
     }
 }
 

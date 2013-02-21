@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QFGCharacterWinUI.Properties
+namespace QfgCharacterLibrary.QfgCharacter.WinUI.Properties
 {
 
 

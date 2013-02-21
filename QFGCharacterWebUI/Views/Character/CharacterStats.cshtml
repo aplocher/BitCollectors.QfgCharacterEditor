@@ -108,8 +108,10 @@
         </td>
     </tr>
     <tr>
-        <td class="tblHeading"></td>
-        <td></td>
+        <td class="tblHeading">Honor:</td>
+        <td>
+            @Html.TextBoxFor(x => x.Honor, (Model.HonorEnabled) ? (object)new { @maxlength=3, @class="inputStat"} : (object)new { @maxlength=3, @class="inputStat", @disabled="disabled" })
+        </td>
         <td class="tblHeadingSpacer"></td>
         <td class="tblHeading">Climbing:</td>
         <td>
@@ -139,6 +141,7 @@
     @Html.HiddenFor(x => x.InventoryHealingPotions)
     @Html.HiddenFor(x => x.InventoryMagicPotions)
     @Html.HiddenFor(x => x.InventoryVigorPotions)
+    @Html.HiddenFor(x => x.InventoryPoisonCurePotions)
     @Html.HiddenFor(x => x.MagicSkillCalm)
     @Html.HiddenFor(x => x.MagicSkillDazzle)
     @Html.HiddenFor(x => x.MagicSkillDetect)

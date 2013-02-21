@@ -1,12 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-using QFGCharacterWinUI.Properties;
-using QfgCharacterLibrary;
-using QfgCharacterLibrary.Enums;
 using System.Collections.Generic;
+using BitCollectors.QfgCharacterEditor.Library;
+using BitCollectors.QfgCharacterEditor.Library.Enums;
+using BitCollectors.QfgCharacterEditor.WinUI.Properties;
 
-namespace QFGCharacterWinUI
+namespace BitCollectors.QfgCharacterEditor.WinUI
 {
     public partial class MainForm : Form
     {
@@ -27,7 +27,7 @@ namespace QFGCharacterWinUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cboQfgGames.DataSource = Enum.GetValues(typeof(QfgCharacterLibrary.Enums.QfgGames));
+            cboQfgGames.DataSource = Enum.GetValues(typeof(QfgGames));
 
             RefreshCharacterClass();
 
@@ -217,7 +217,7 @@ namespace QFGCharacterWinUI
 
         private void RefreshCharacterClass()
         {
-            Array classes = Enum.GetValues(typeof(QfgCharacterLibrary.Enums.QfgClasses));
+            Array classes = Enum.GetValues(typeof(QfgClasses));
 
             if (_character.QfgGameInfo.HasPaladin)
             {

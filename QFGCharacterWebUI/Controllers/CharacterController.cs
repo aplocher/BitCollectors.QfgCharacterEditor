@@ -1,12 +1,12 @@
-﻿using QfgCharacterLibrary;
-using System;
+﻿using System;
 using System.Web.Mvc;
 using System.Linq;
 using System.Web;
 using System.IO;
 using System.Text;
+using BitCollectors.QfgCharacterEditor.Library;
 
-namespace QFGCharacterWebUI.Controllers
+namespace BitCollectors.QfgCharacterEditor.WebUI.Controllers
 {
     public class CharacterController : Controller
     {
@@ -73,40 +73,19 @@ namespace QFGCharacterWebUI.Controllers
         [HttpPost]
         public ActionResult MaxStats(QfgCharacter qfgCharacter)
         {
-            ModelState.Remove("Agility");
-            ModelState.Remove("WeaponUse");
-            ModelState.Remove("Intelligence");
-            ModelState.Remove("Strength");
-            ModelState.Remove("Vitality");
-            ModelState.Remove("Luck");
-            ModelState.Remove("Communication");
-            ModelState.Remove("Parry");
-            ModelState.Remove("Dodge");
-            ModelState.Remove("Stealth");
-            ModelState.Remove("PickLocks");
-            ModelState.Remove("Throwing");
-            ModelState.Remove("Climbing");
-            ModelState.Remove("Magic");
-            ModelState.Remove("Acrobatics");
-
-            ModelState.Remove("MagicSkillCalm");
-            ModelState.Remove("MagicSkillDazzle");
-            ModelState.Remove("MagicSkillDetect");
-            ModelState.Remove("MagicSkillFetch");
-            ModelState.Remove("MagicSkillFlame");
-            ModelState.Remove("MagicSkillForceBolt");
-            ModelState.Remove("MagicSkillLevitate");
-            ModelState.Remove("MagicSkillOpen");
-            ModelState.Remove("MagicSkillReversal");
-            ModelState.Remove("MagicSkillTrigger");
-            ModelState.Remove("MagicSkillZap");
-
-            ModelState.Remove("InventoryDaggers");
-            ModelState.Remove("InventoryHealingPotions");
-            ModelState.Remove("InventoryMagicPotions");
-            ModelState.Remove("InventoryVigorPotions");
+            ResetModelState();
 
             qfgCharacter.SetMaxValues();
+
+            return View(Request.Form["Page"], qfgCharacter);
+        }
+
+        [HttpPost]
+        public ActionResult ChangeGame(QfgCharacter qfgCharacter)
+        {
+            ResetModelState();
+
+            qfgCharacter.LoadGameInfo();
 
             return View(Request.Form["Page"], qfgCharacter);
         }
@@ -140,6 +119,44 @@ namespace QFGCharacterWebUI.Controllers
             string characterString = qfgCharacter.Encode();
 
             return File(Encoding.ASCII.GetBytes(characterString), "application/force-download", "character.sav");
+        }
+
+        private void ResetModelState()
+        {
+            ModelState.Remove("Agility");
+            ModelState.Remove("WeaponUse");
+            ModelState.Remove("Intelligence");
+            ModelState.Remove("Strength");
+            ModelState.Remove("Vitality");
+            ModelState.Remove("Luck");
+            ModelState.Remove("Communication");
+            ModelState.Remove("Parry");
+            ModelState.Remove("Dodge");
+            ModelState.Remove("Stealth");
+            ModelState.Remove("PickLocks");
+            ModelState.Remove("Throwing");
+            ModelState.Remove("Climbing");
+            ModelState.Remove("Magic");
+            ModelState.Remove("Acrobatics");
+            ModelState.Remove("Honor");
+
+            ModelState.Remove("MagicSkillCalm");
+            ModelState.Remove("MagicSkillDazzle");
+            ModelState.Remove("MagicSkillDetect");
+            ModelState.Remove("MagicSkillFetch");
+            ModelState.Remove("MagicSkillFlame");
+            ModelState.Remove("MagicSkillForceBolt");
+            ModelState.Remove("MagicSkillLevitate");
+            ModelState.Remove("MagicSkillOpen");
+            ModelState.Remove("MagicSkillReversal");
+            ModelState.Remove("MagicSkillTrigger");
+            ModelState.Remove("MagicSkillZap");
+
+            ModelState.Remove("InventoryDaggers");
+            ModelState.Remove("InventoryHealingPotions");
+            ModelState.Remove("InventoryMagicPotions");
+            ModelState.Remove("InventoryVigorPotions");
+            ModelState.Remove("InventoryPoisonCurePotions");
         }
     }
 }

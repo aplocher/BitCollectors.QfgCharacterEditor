@@ -81,6 +81,12 @@
                 @Html.TextBoxFor(x => x.InventoryMagicPotions, new { @maxlength = 3, @class = "inputStat" })
             </td>
         </tr>
+        <tr>
+            <td class="tblHeading">Poison Cure Potions:</td>
+            <td>
+                @Html.TextBoxFor(x => x.InventoryPoisonCurePotions, (Model.InventoryPoisonCurePotionEnabled) ? (object)new { @maxlength=3, @class="inputStat"} : (object)new { @maxlength=3, @class="inputStat", @disabled="disabled" })
+            </td>
+        </tr>
     </table>
 
     @Html.HiddenFor(x => x.Acrobatics)
@@ -88,6 +94,7 @@
     @Html.HiddenFor(x => x.Climbing)
     @Html.HiddenFor(x => x.Communication)
     @Html.HiddenFor(x => x.Dodge)
+    @Html.HiddenFor(x => x.Honor)
     @Html.HiddenFor(x => x.Intelligence)
     @Html.HiddenFor(x => x.Luck)
     @Html.HiddenFor(x => x.Magic)

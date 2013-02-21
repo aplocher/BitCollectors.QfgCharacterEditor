@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace QFGCharacterWebUI.HtmlHelpers
+namespace BitCollectors.QfgCharacterEditor.WebUI.HtmlHelpers
 {
     public static class ExtensionMethods
     {

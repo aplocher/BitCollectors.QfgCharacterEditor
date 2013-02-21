@@ -1,5 +1,5 @@
 ﻿
-namespace QfgCharacterLibrary.Interfaces
+namespace BitCollectors.QfgCharacterEditor.Library.Interfaces
 {
     public interface IQfgGameInfo
     {
@@ -12,6 +12,8 @@ namespace QfgCharacterLibrary.Interfaces
         int MaxHealingPotions { get; }
 
         int MaxVigorPotions { get; }
+
+        int MaxPoisonCurePotions { get; }
 
         int MaxMagicPotions { get; }
 
@@ -28,6 +30,8 @@ namespace QfgCharacterLibrary.Interfaces
         bool HasReversal { get; }
 
         bool HasPaladin { get; }
+
+        bool HasPoisonCurePotion { get; }
 
         void LoadMappings(int index, int value, QfgCharacter character);
 

@@ -53,3 +53,10 @@ C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QfgCharacterLibra
 C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.dll
 C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.pdb
 C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.csprojResolveAssemblyReference.cache
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QfgCharacterLibrary\bin\Debug\QfgCharacterLibrary.dll
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QfgCharacterLibrary\bin\Debug\QfgCharacterLibrary.pdb
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.csprojResolveAssemblyReference.cache
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.dll
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QfgCharacterLibrary\obj\Debug\QfgCharacterLibrary.pdb
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QfgCharacterLibrary\bin\Debug\QfgCharacterLibrary.dll.CodeAnalysisLog.xml
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QfgCharacterLibrary\bin\Debug\QfgCharacterLibrary.dll.lastcodeanalysissucceeded

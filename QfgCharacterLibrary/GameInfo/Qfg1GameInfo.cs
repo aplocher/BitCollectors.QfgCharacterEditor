@@ -1,9 +1,9 @@
-﻿using QfgCharacterLibrary.Enums;
-using QfgCharacterLibrary.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using BitCollectors.QfgCharacterEditor.Library.Enums;
+using BitCollectors.QfgCharacterEditor.Library.Interfaces;
 
-namespace QfgCharacterLibrary.GameInfo
+namespace BitCollectors.QfgCharacterEditor.Library.GameInfo
 {
     public class Qfg1GameInfo : IQfgGameInfo
     {
@@ -361,6 +361,18 @@ namespace QfgCharacterLibrary.GameInfo
             {
                 //throw new Exception("Invalid Character Checksums");
             }
+        }
+
+
+        public bool HasPoisonCurePotion
+        {
+            get { return false; }
+        }
+
+
+        public int MaxPoisonCurePotions
+        {
+            get { return 0; }
         }
     }
 }

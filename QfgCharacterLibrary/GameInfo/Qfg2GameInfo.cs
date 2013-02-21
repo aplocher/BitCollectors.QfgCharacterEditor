@@ -1,11 +1,11 @@
-﻿using QfgCharacterLibrary.Enums;
-using QfgCharacterLibrary.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BitCollectors.QfgCharacterEditor.Library.Enums;
+using BitCollectors.QfgCharacterEditor.Library.Interfaces;
 
-namespace QfgCharacterLibrary.GameInfo
+namespace BitCollectors.QfgCharacterEditor.Library.GameInfo
 {
     public class Qfg2GameInfo: IQfgGameInfo
     {
@@ -87,6 +87,22 @@ namespace QfgCharacterLibrary.GameInfo
 
                 case 36:
                     character.InventoryDaggers = value;
+                    break;
+
+                case 37:
+                    character.InventoryHealingPotions = value;
+                    break;
+
+                case 38:
+                    character.InventoryVigorPotions = value;
+                    break;
+
+                case 39:
+                    character.InventoryMagicPotions = value;
+                    break;
+
+                case 40:
+                    character.InventoryPoisonCurePotions = value;
                     break;
 
                 case 25:
@@ -202,7 +218,7 @@ namespace QfgCharacterLibrary.GameInfo
 
         public string EncodedCharacterString(QfgCharacter character)
         {
-            string str = string.Format("83-{27}-25-25-200-1-{0}-{1}-{2}-{3}-{4}-{5}-{6}-{7}-{8}-{9}-{10}-{11}-{12}-{13}-{14}-25-25-25-25-{15}-{16}-{17}-{18}-{19}-{20}-{21}-{22}-{23}-{24}-{25}-{26}-5-5-5-5-160-62-9991-9992-47-144-25-163-",
+            string str = string.Format("83-{31}-25-25-200-1-{0}-{1}-{2}-{3}-{4}-{5}-{6}-{7}-{8}-{9}-{10}-{11}-{12}-{13}-{14}-25-25-25-25-{15}-{16}-{17}-{18}-{19}-{20}-{21}-{22}-{23}-{24}-{25}-{26}-{27}-{28}-{29}-{30}-160-62-9991-9992-47-144-25-163-",
                 character.Strength.ToString(),
                 character.Intelligence.ToString(),
                 character.Agility.ToString(),
@@ -230,6 +246,10 @@ namespace QfgCharacterLibrary.GameInfo
                 character.MagicSkillLevitate.ToString(),
                 character.MagicSkillReversal.ToString(),
                 character.InventoryDaggers.ToString(),
+                character.InventoryHealingPotions.ToString(),
+                character.InventoryMagicPotions.ToString(),
+                character.InventoryVigorPotions.ToString(),
+                character.InventoryPoisonCurePotions.ToString(),
                 ((int)character.QfgClass).ToString()
                 );
 
@@ -373,6 +393,18 @@ namespace QfgCharacterLibrary.GameInfo
             {
                 //throw new Exception("Invalid Character Checksums");
             }
+        }
+
+
+        public bool HasPoisonCurePotion
+        {
+            get { return true; }
+        }
+
+
+        public int MaxPoisonCurePotions
+        {
+            get { return 5; }
         }
     }
 }

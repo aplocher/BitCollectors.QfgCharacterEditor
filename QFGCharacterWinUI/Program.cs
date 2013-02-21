@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace QFGCharacterWinUI
+namespace BitCollectors.QfgCharacterEditor.WinUI
 {
     static class Program
     {

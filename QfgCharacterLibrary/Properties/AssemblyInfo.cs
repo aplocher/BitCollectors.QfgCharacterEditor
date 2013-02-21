@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("QfgCharacterLibrary")]
+[assembly: AssemblyTitle("BitCollectors.QfgCharacterEditor.Library")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("QfgCharacterLibrary")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2011")]
+[assembly: AssemblyCompany("BitCollectors")]
+[assembly: AssemblyProduct("BitCollectors.QfgCharacterEditor.Library")]
+[assembly: AssemblyCopyright("Copyright © BitCollectors 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

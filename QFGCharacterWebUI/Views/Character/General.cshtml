@@ -10,6 +10,10 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+        $("#QfgGame").change(function () {
+            goPage('/Character/ChangeGame');
+        });
+
         $("#QfgClass").change(function () {
             changeCharacterImage();
         });
@@ -42,19 +46,41 @@
         });
 
         function changeCharacterImage() {
-            var selectedVal = $("#QfgClass").val();
+            var selectedGame = $("#QfgGame").val();
+            var selectedClass = $("#QfgClass").val();
 
-            switch (selectedVal) {
-                case "Fighter":
-                    $("#divCharacterImg").css("background-image", "url('/Images/QFG1-Fighter.jpg')");
+            switch (selectedGame) {
+                case "QFG1":
+                    switch (selectedClass) {
+                        case "Fighter":
+                            $("#divCharacterImg").css("background-image", "url('/Images/QFG1-Fighter.jpg')");
+                            break;
+
+                        case "Magic":
+                            $("#divCharacterImg").css("background-image", "url('/Images/QFG1-Mage.jpg')");
+                            break;
+
+                        case "Thief":
+                            $("#divCharacterImg").css("background-image", "url('/Images/QFG1-Thief.jpg')");
+                            break;
+                    }
                     break;
 
-                case "Magic":
-                    $("#divCharacterImg").css("background-image", "url('/Images/QFG1-Mage.jpg')");
-                    break;
+                case "QFG2":
+                    switch (selectedClass) {
+                        case "Fighter":
+                        case "Paladin":
+                            $("#divCharacterImg").css("background-image", "url('/Images/QFG2-Fighter.jpg')");
+                            break;
 
-                case "Thief":
-                    $("#divCharacterImg").css("background-image", "url('/Images/QFG1-Thief.jpg')");
+                        case "Magic":
+                            $("#divCharacterImg").css("background-image", "url('/Images/QFG2-Mage.jpg')");
+                            break;
+
+                        case "Thief":
+                            $("#divCharacterImg").css("background-image", "url('/Images/QFG2-Thief.jpg')");
+                            break;
+                    }
                     break;
             }
         }
@@ -70,7 +96,7 @@
     <tr>
         <td class="tblHeading">Game:</td>
         <td>
-            @Html.DropDownListFor(x => x.QfgGame, @Model.QfgGame.ToSelectList(), new { @disabled = "disabled" })
+            @Html.DropDownListFor(x => x.QfgGame, @Model.QfgGame.ToSelectList())
         </td>
     </tr>
     <tr>
@@ -96,6 +122,7 @@
     @Html.HiddenFor(x => x.InventoryHealingPotions)
     @Html.HiddenFor(x => x.InventoryMagicPotions)
     @Html.HiddenFor(x => x.InventoryVigorPotions)
+    @Html.HiddenFor(x => x.InventoryPoisonCurePotions)
     @Html.HiddenFor(x => x.Luck)
     @Html.HiddenFor(x => x.Magic)
     @Html.HiddenFor(x => x.MagicSkillCalm)
@@ -116,6 +143,7 @@
     @Html.HiddenFor(x => x.Throwing)
     @Html.HiddenFor(x => x.Vitality)
     @Html.HiddenFor(x => x.WeaponUse)
+    @Html.HiddenFor(x => x.Honor)
 
     @Html.Hidden("Page", "General")
 </form>

@@ -26,3 +26,12 @@ C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI
 C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.csprojResolveAssemblyReference.cache
 C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.dll
 C:\SourceCode\GitRepositories\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.pdb
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\bin\QFGCharacterWebUI.dll
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\bin\QFGCharacterWebUI.pdb
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\bin\QfgCharacterLibrary.dll
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\bin\QfgCharacterLibrary.pdb
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.csprojResolveAssemblyReference.cache
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.dll
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\obj\Debug\QFGCharacterWebUI.pdb
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\bin\QFGCharacterWebUI.dll.CodeAnalysisLog.xml
+C:\SourceGit\BitCollectors.QfgCharacterEditor\QFGCharacterWebUI\bin\QFGCharacterWebUI.dll.lastcodeanalysissucceeded
