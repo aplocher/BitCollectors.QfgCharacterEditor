@@ -108,7 +108,7 @@
     <tr>
         <td class="tblHeading">Character Name:</td>
         <td>
-            @Html.TextBoxFor(x => x.CharacterName)
+            @Html.TextBoxFor(x => x.CharacterName, new { @maxlength = 39 })
         </td>
     </tr>
     </table>
