@@ -1,0 +1,6 @@
+﻿<configuration>
+    <appSettings>
+      <add key="webpages:Version" value="2.0.0.0" />
+      <add key="PreserveLoginUrl" value="true" />
+    </appSettings>
+</configuration>

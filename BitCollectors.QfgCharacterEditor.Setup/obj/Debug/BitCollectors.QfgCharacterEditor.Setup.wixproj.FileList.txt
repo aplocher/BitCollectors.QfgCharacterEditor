@@ -1,0 +1,6 @@
+C:\SourceCode\BitCollectors.QfgCharacterEditor\BitCollectors.QfgCharacterEditor.Setup\bin\Debug\BitCollectors.QfgCharacterEditor.Setup.msi
+C:\SourceCode\BitCollectors.QfgCharacterEditor\BitCollectors.QfgCharacterEditor.Setup\bin\Debug\BitCollectors.QfgCharacterEditor.Setup.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\BitCollectors.QfgCharacterEditor.Setup.wixproj.BindContentsFileListnull.txt
+obj\Debug\BitCollectors.QfgCharacterEditor.Setup.wixproj.BindOutputsFileListnull.txt
+obj\Debug\BitCollectors.QfgCharacterEditor.Setup.wixproj.BindBuiltOutputsFileListnull.txt

@@ -1,0 +1,2 @@
+C:\SourceCode\BitCollectors.QfgCharacterEditor\BitCollectors.QfgCharacterEditor.WinUI\bin\Debug\QfgCharacterEditor.exe
+C:\SourceCode\BitCollectors.QfgCharacterEditor\BitCollectors.QfgCharacterEditor.Library\bin\Debug\QfgCharacterLibrary.dll

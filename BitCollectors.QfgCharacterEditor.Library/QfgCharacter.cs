@@ -15,16 +15,6 @@ namespace BitCollectors.QfgCharacterEditor.Library
             LoadGameInfo();
         }
 
-        public delegate void LogDataDelegate(object sender, string logData);
-
-        public event LogDataDelegate LogData;
-
-        protected void OnLogData(string logData)
-        {
-            if (LogData != null)
-                LogData(this, logData);
-        }
-
         private QfgGames _qfgGame = QfgGames.QFG1;
         private QfgClasses _qfgClass = QfgClasses.Fighter;
         private string _characterName = "";

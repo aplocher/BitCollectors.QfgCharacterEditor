@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.textBox33 = new System.Windows.Forms.TextBox();
             this.qfgCharacterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox26 = new System.Windows.Forms.TextBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.textBox29 = new System.Windows.Forms.TextBox();
@@ -104,18 +107,16 @@
             this.label14 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.txtLogData = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tbtnLoad = new System.Windows.Forms.ToolStripButton();
             this.tbtnSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tbtnMaxValues = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tbtnAbout = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tlblCurrentFile = new System.Windows.Forms.ToolStripStatusLabel();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qfgCharacterBindingSource)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -123,7 +124,6 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCharacterImage)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -149,6 +149,28 @@
             this.tabPage4.Text = "Inventory";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // textBox33
+            // 
+            this.textBox33.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "InventoryPoisonCurePotions", true));
+            this.textBox33.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "InventoryPoisonCurePotionEnabled", true));
+            this.textBox33.Location = new System.Drawing.Point(123, 113);
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(68, 20);
+            this.textBox33.TabIndex = 9;
+            // 
+            // qfgCharacterBindingSource
+            // 
+            this.qfgCharacterBindingSource.DataSource = typeof(BitCollectors.QfgCharacterEditor.Library.QfgCharacter);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Poison Cure Potions";
+            // 
             // textBox26
             // 
             this.textBox26.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "InventoryMagicPotions", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -156,10 +178,6 @@
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(68, 20);
             this.textBox26.TabIndex = 7;
-            // 
-            // qfgCharacterBindingSource
-            // 
-            this.qfgCharacterBindingSource.DataSource = typeof(BitCollectors.QfgCharacterEditor.Library.QfgCharacter);
             // 
             // textBox27
             // 
@@ -875,35 +893,12 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(12, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(502, 368);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.txtLogData);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(494, 342);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Log";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // txtLogData
-            // 
-            this.txtLogData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtLogData.Location = new System.Drawing.Point(3, 3);
-            this.txtLogData.Multiline = true;
-            this.txtLogData.Name = "txtLogData";
-            this.txtLogData.ReadOnly = true;
-            this.txtLogData.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtLogData.Size = new System.Drawing.Size(488, 336);
-            this.txtLogData.TabIndex = 35;
             // 
             // errorProvider1
             // 
@@ -915,7 +910,9 @@
             this.tbtnLoad,
             this.tbtnSave,
             this.toolStripSeparator1,
-            this.tbtnMaxValues});
+            this.tbtnMaxValues,
+            this.toolStripSeparator2,
+            this.tbtnAbout});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(524, 25);
@@ -954,6 +951,20 @@
             this.tbtnMaxValues.Text = "&Max Stats";
             this.tbtnMaxValues.Click += new System.EventHandler(this.tbtnMaxValues_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tbtnAbout
+            // 
+            this.tbtnAbout.Image = global::BitCollectors.QfgCharacterEditor.WinUI.Properties.Resources.help;
+            this.tbtnAbout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnAbout.Name = "tbtnAbout";
+            this.tbtnAbout.Size = new System.Drawing.Size(60, 22);
+            this.tbtnAbout.Text = "&About";
+            this.tbtnAbout.Click += new System.EventHandler(this.tbtnAbout_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -969,24 +980,6 @@
             this.tlblCurrentFile.Name = "tlblCurrentFile";
             this.tlblCurrentFile.Size = new System.Drawing.Size(0, 17);
             // 
-            // textBox33
-            // 
-            this.textBox33.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qfgCharacterBindingSource, "InventoryPoisonCurePotions", true));
-            this.textBox33.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", this.qfgCharacterBindingSource, "InventoryPoisonCurePotionEnabled", true));
-            this.textBox33.Location = new System.Drawing.Point(123, 113);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(68, 20);
-            this.textBox33.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 117);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Poison Cure Potions";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -995,6 +988,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(540, 459);
             this.Name = "MainForm";
             this.Text = "QFG Character Editor";
@@ -1011,8 +1005,6 @@
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCharacterImage)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -1093,14 +1085,12 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TextBox txtLogData;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tbtnLoad;
         private System.Windows.Forms.ToolStripButton tbtnSave;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton tbtnMaxValues;
-        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tlblCurrentFile;
         private System.Windows.Forms.PictureBox pbCharacterImage;
@@ -1112,6 +1102,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox33;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton tbtnAbout;
     }
 }
 

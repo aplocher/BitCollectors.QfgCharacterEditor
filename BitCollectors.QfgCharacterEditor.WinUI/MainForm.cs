@@ -10,19 +10,13 @@ namespace BitCollectors.QfgCharacterEditor.WinUI
 {
     public partial class MainForm : Form
     {
-        private QfgCharacter _character = null;
+        private readonly QfgCharacter _character = null;
 
         public MainForm()
         {
             InitializeComponent();
 
             _character = new QfgCharacter();
-            _character.LogData += new QfgCharacter.LogDataDelegate(character_LogData);
-        }
-
-        private void character_LogData(object sender, string logData)
-        {
-            txtLogData.Text += "-- " + logData + Environment.NewLine;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -95,8 +89,6 @@ namespace BitCollectors.QfgCharacterEditor.WinUI
                     return;
                 }
             }
-
-            txtLogData.Text = "";
 
             using (OpenFileDialog openDialog = new OpenFileDialog())
             {
@@ -303,6 +295,14 @@ namespace BitCollectors.QfgCharacterEditor.WinUI
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.ValidateChildren();
+        }
+
+        private void tbtnAbout_Click(object sender, EventArgs e)
+        {
+            using (AboutForm aboutForm = new AboutForm())
+            {
+                aboutForm.ShowDialog();
+            }
         }
     }
 }

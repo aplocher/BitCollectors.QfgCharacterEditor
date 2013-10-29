@@ -1,0 +1,2 @@
+C:\SourceCode\BitCollectors.QfgCharacterEditor\BitCollectors.QfgCharacterEditor.Setup\bin\Debug\BitCollectors.QfgCharacterEditor.Setup.msi
+C:\SourceCode\BitCollectors.QfgCharacterEditor\BitCollectors.QfgCharacterEditor.Setup\bin\Debug\BitCollectors.QfgCharacterEditor.Setup.wixpdb
