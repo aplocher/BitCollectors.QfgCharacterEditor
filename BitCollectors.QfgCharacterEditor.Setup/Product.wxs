@@ -6,6 +6,10 @@
     <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
     <MediaTemplate EmbedCab="yes" />
 
+    <Icon Id="QfgCharacterEditor.ico" SourceFile="..\..\..\BitCollectors.QfgCharacterEditor.WinUI\BitCollectors.QfgCharacterEditor.ico" />
+    <Property Id="ARPPRODUCTICON" Value="QfgCharacterEditor.ico" />
+    <Property Id="ARPHELPLINK" Value="http://www.bitcollectors.com/" />
+
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="ProgramFilesFolder">
         <Directory Id="INSTALLFOLDER" Name="QfgCharacterEditor" />
@@ -45,7 +49,7 @@
       </Feature>
     </Feature>
 
-    <UIRef Id="WixUI_Mondo" />
+    <UIRef Id="WixUI_Minimal" />
     <UIRef Id="WixUI_ErrorProgressText" />
 
   </Product>
