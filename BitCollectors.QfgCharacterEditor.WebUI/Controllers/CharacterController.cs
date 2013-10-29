@@ -12,13 +12,13 @@ namespace BitCollectors.QfgCharacterEditor.WebUI.Controllers
     {
         public ActionResult General()
         {
-            return View(new QfgCharacter());
+            return View("General", new QfgCharacter());
         }
 
         [HttpPost]
         public ActionResult General(QfgCharacter qfgCharacter)
         {
-            return View(qfgCharacter);
+            return View("General", qfgCharacter);
         }
 
         public ActionResult CharacterStats()
@@ -31,7 +31,7 @@ namespace BitCollectors.QfgCharacterEditor.WebUI.Controllers
         {
             ViewBag.MaxCharacterStats = qfgCharacter.QfgGameInfo.MaxCharacterStatValue;
 
-            return View(qfgCharacter);
+            return View("CharacterStats", qfgCharacter);
         }
 
         public ActionResult Inventory()
@@ -47,7 +47,7 @@ namespace BitCollectors.QfgCharacterEditor.WebUI.Controllers
             ViewBag.MaxMagicPotions = qfgCharacter.QfgGameInfo.MaxMagicPotions;
             ViewBag.MaxVigorPotions = qfgCharacter.QfgGameInfo.MaxVigorPotions;
 
-            return View(qfgCharacter);
+            return View("Inventory", qfgCharacter);
         }
 
         public ActionResult MagicStats()
@@ -60,7 +60,7 @@ namespace BitCollectors.QfgCharacterEditor.WebUI.Controllers
         {
             ViewBag.MaxMagicStats = qfgCharacter.QfgGameInfo.MaxMagicStatValue;
 
-            return View(qfgCharacter);
+            return View("MagicStats", qfgCharacter);
         }
 
         public ActionResult MaxStats()
@@ -77,7 +77,27 @@ namespace BitCollectors.QfgCharacterEditor.WebUI.Controllers
 
             qfgCharacter.SetMaxValues();
 
-            return View(Request.Form["Page"], qfgCharacter);
+            switch (Request.Form["Page"].ToLower())
+            {
+                case "inventory":
+                    return Inventory(qfgCharacter);
+
+                case "magicstats":
+                    return MagicStats(qfgCharacter);
+
+                case "characterstats":
+                    return CharacterStats(qfgCharacter);
+
+                default:
+                    return General(qfgCharacter);
+            }
+
+
+            //RedirectToAction(Request.Form["Page"], )
+
+            
+
+            //return View(Request.Form["Page"], qfgCharacter);
         }
 
         [HttpPost]

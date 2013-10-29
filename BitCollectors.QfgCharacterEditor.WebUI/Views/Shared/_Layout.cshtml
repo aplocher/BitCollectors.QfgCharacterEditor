@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Reflection
+@using BitCollectors.QfgCharacterEditor.WebUI.Controllers
+<!DOCTYPE html>
 <html>
 <head>
     <title>@ViewBag.Title</title>
@@ -84,6 +86,14 @@
         <div id="tabBodyContainer">
             @RenderBody()
         </div>
+        
+        <p>
+            To download the Windows version, source code, or to find out more information, <a href="http://www.bitcollectors.com/Project/QfgCharacterEditor" target="_blank">please see the project page</a>.
+        </p>
+        <p>
+            Version: @Assembly.GetAssembly(typeof(CharacterController)).GetName().Version.ToString()
+            - brought to you by <a href="http://www.bitcollectors.com" target="_blank">BitCollectors</a>.
+        </p>
     </div>
 </body>
 </html>
