@@ -8,15 +8,16 @@ namespace BitCollectors.QfgCharacterEditor.WebUI
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/script").Include(
+                "~/Scripts/jquery-1.9.1.min.js",
+                "~/Scripts/jquery.validate.min.js",
+                "~/Scripts/BitCollectors.QfgCharacterEditor.js"
+                ));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui-{version}.js"));
+            bundles.Add(new StyleBundle("~/bundles/css").Include(
+                "~/Content/site.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.unobtrusive*",
-                        "~/Scripts/jquery.validate*"));
+            BundleTable.EnableOptimizations = true;
         }
     }
 }

@@ -4,37 +4,9 @@
 <html>
 <head>
     <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
-
-    <script type="text/javascript">
-        function goPage(url) {
-            var form = document.getElementById('mainForm');
-            form.action = url;
-            form.submit();
-        }
-
-        function showLoadDialog() {
-            document.getElementById('loadDialog').style.display = 'block';
-            $('#pageContainer :input').attr('readonly', true);
-        }
-
-        function closeLoadDialog() {
-            $('#loadDialog').css('display', 'none');
-            $('#pageContainer :input').removeAttr('readonly');
-        }
-
-        $(function () {
-            $("#lnkMaxStats").click(function () { goPage('/Character/MaxStats') });
-
-            $("#lnkSave").click(function () { goPage('/Character/Save') });
-
-            $('#lnkLoad').click(function () { showLoadDialog(); });
-            $('#btnLoadCancel').click(function () { closeLoadDialog(); });
-            $('#btnLoadOK').click(function () { closeLoadDialog(); });
-        });
-    </script>
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/script")
+    @RenderSection("scripts", required: false)
 </head>
 
 <body>
