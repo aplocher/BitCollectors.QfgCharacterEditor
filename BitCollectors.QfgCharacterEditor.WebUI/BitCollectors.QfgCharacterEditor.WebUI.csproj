@@ -43,6 +43,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime">
@@ -162,12 +163,12 @@
     <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <None Include="Images\disk.png" />
-    <None Include="Images\folder.png" />
-    <None Include="Images\page_white_get.png" />
-    <None Include="Images\QFG1-Fighter.jpg" />
-    <None Include="Images\QFG1-Mage.jpg" />
-    <None Include="Images\QFG1-Thief.jpg" />
+    <Content Include="Images\disk.png" />
+    <Content Include="Images\folder.png" />
+    <Content Include="Images\page_white_get.png" />
+    <Content Include="Images\QFG1-Fighter.jpg" />
+    <Content Include="Images\QFG1-Mage.jpg" />
+    <Content Include="Images\QFG1-Thief.jpg" />
     <Content Include="Images\QFG2-Fighter.jpg" />
     <Content Include="Images\QFG2-Mage.jpg" />
     <Content Include="Images\QFG2-Thief.jpg" />
@@ -203,6 +204,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Debug.pubxml" />
     <None Include="Properties\PublishProfiles\Release.pubxml" />
   </ItemGroup>
   <ItemGroup>
